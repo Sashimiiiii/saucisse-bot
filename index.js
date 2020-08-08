@@ -87,4 +87,4 @@ if(cmd) cmd.run(bot, message, args);
 
 
 
-bot.login("NzIyNTAxMTE0NDkwMjU3NDQ5.Xuj_mQ.ndgOO71AHcKqM-ir4basXYoaOts")
+bot.login(process.env.TOKEN)
