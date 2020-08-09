@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 var stream = require("ytdl-core");
-const ffmpeg = require("ffmpeg")
 
 module.exports = {
 	name: 'papopi',
