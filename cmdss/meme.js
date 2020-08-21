@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     {
 {
     message.delete();
-     var roll = Math.floor(Math.random() * 13) + 1;     //return Math.floor(Math.random() * (max - min + 1)) + min;
+     var roll = Math.floor(Math.random() * 14) + 1;     //return Math.floor(Math.random() * (max - min + 1)) + min;
     
      if(roll==1) { 
         message.channel.send({ files: ["./images/meme/are you winning.mp4"] })
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
 
     }
     else if (roll==5) {
-        message.channel.send({ files: ["./images/meme/enculé de sauce.mp4"] })
+        message.channel.send("https://twitter.com/SRU_Space/status/1290010698387341312") //encule de sauce
 
     }
     else if (roll==6) {
@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
 
     }
     else if (roll==7) {
-        message.channel.send({ files: ["./images/meme/juge.mp4"] })
+        message.channel.send("https://twitter.com/SRU_Space/status/1290220237523161090") //juge
    
     }
     else if (roll==8) {
@@ -67,13 +67,19 @@ module.exports.run = async (bot, message, args) => {
     }
     else if (roll==12) {
  
-        message.channel.send({ files: ["./images/meme/wide saucisse.mp4"] })
+        message.channel.send("https://twitter.com/SRU_Space/status/1282428787414765568") //wide saucisse
     
 
     }
     else if (roll==13) {
 
         message.channel.send({ files: ["./images/meme/yeti.jpg"] })
+    
+
+    }
+	  else if (roll==14) {
+
+        message.channel.send({ files: ["./images/meme/mousse.jpg"] })
     
 
     }
