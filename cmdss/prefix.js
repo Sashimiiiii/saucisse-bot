@@ -10,6 +10,10 @@ module.exports.run = async (bot, message, args, prefix) => {
 
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
+	if (args[0] === "") {
+            return message.channel.send(`Écris au moins un mot, ${message.author}!`);
+        }	
+	
     prefixes[message.guild.id] = {
         prefixes: args[0]
     };
