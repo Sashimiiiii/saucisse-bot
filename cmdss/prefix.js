@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 
 module.exports = {
-	name: 'prefix [nouveau prefix]',
+	name: 'prefix',
 	description: 'pour changer le prefix',
 }
 
@@ -10,16 +10,14 @@ module.exports.run = async (bot, message, args, prefix) => {
 
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
-		
-	
     prefixes[message.guild.id] = {
         prefixes: args[0]
     };
-if (args[0] = null) {
-            return message.channel.send(`Le prefix est vide!, ${message.author}!`);
 
-	
-	
+    if (!args[0] == "") {
+        
+    
+
     fs.writeFile("./prefixes.json", JSON.stringify(prefixes), (err) => {
         if (err) console.log(err)
     });
@@ -28,11 +26,23 @@ if (args[0] = null) {
     .setColor("#FF9900")
 .setTitle("Prefix mit à jour")
 .setDescription("Le prefix est maintenant "+ args[0]);
-	}
+
+    
+
+
+
 
 message.channel.send(sEmbed);
 
 }
+else {
+    return message.channel.send(`Le prefix est vide!, ${message.author}!`);
+}
+}
+
+
+
+
 
 module.exports.help = {
     name: "prefix"
