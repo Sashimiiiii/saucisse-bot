@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 
 module.exports = {
-	name: 'prefix',
+	name: 'prefix [nouveau prefix]',
 	description: 'pour changer le prefix',
 }
 
