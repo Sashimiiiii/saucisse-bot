@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args, prefix) => {
         prefixes: args[0]
     };
 
-	if (args[0] === "") {
+	if (args[0] = undefined) {
             return message.channel.send(`Le prefix est vide!, ${message.author}!`);
         }
 	
