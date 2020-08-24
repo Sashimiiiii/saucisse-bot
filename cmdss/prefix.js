@@ -15,10 +15,9 @@ module.exports.run = async (bot, message, args, prefix) => {
     prefixes[message.guild.id] = {
         prefixes: args[0]
     };
-if (args[0] = undefined) {
+if (args[0] != undefined) {
             return message.channel.send(`Le prefix est vide!, ${message.author}!`);
-       
-	return; }
+
 	
 	
     fs.writeFile("./prefixes.json", JSON.stringify(prefixes), (err) => {
@@ -29,6 +28,7 @@ if (args[0] = undefined) {
     .setColor("#FF9900")
 .setTitle("Prefix mit à jour")
 .setDescription("Le prefix est maintenant "+ args[0]);
+	}
 
 message.channel.send(sEmbed);
 
