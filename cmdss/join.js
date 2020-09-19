@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     
         voiceChannel.join().then(connection => {
         console.log("joined channel");
-        const dispatcher = connection.playFile('./sons/caramel.mp3');
+        const dispatcher = connection.playFile('./sons/bonjour.mp3');
         dispatcher.setVolume(2.1);
         dispatcher.on("end", end => {
 
