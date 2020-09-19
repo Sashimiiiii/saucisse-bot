@@ -2,6 +2,12 @@ const Discord = require('discord.js');
 const fs = require('fs');
 var stream = require("ytdl-core");
 
+module.exports = {
+	name: 'join',
+	description: "Fait rejoindre le bot dans le vocal",
+}
+
+
 module.exports.run = async (bot, message, args) => {
   
 
