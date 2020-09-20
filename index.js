@@ -78,6 +78,9 @@ let prefix = prefixes[message.guild.id].prefixes;
     if(msg.includes("NOU")) {
         message.react('739896409062506537');
     }
+    if(msg.includes("MANU")) {
+        message.react('731078430145118249');
+    }
     if(msg.includes('CHALLENGE')) {
         message.channel.send('Challenge sexe tiktok tit cock 2014 ça tourne mal');
     }
