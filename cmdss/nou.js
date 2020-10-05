@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     {
 {
         message.delete();
-        var couteau = new Discord.RichEmbed()
+        var couteau = new Discord.MessageEmbed()
         .setColor('#ff0000')
         .setImage("https://media.discordapp.net/attachments/730768784062939176/739894545973510164/received_1694695357353857.jpeg");
         message.channel.send(couteau)
