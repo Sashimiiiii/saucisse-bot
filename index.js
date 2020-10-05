@@ -63,7 +63,7 @@ let prefix = prefixes[message.guild.id].prefixes;
     }
 
     if(msg.includes('BIBLA')) {
-        var couteau = new Discord.RichEmbed()
+        var couteau = new Discord.MessageEmbed()
         .setAuthor(`Ce mec est un linguiste occitan`)
         .setColor('#ff0000')
         .setImage("https://media.discordapp.net/attachments/730527992148656211/739934124264915025/received_3263177790387217.jpeg");
