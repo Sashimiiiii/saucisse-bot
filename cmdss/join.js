@@ -14,10 +14,11 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
+        const dispatcher = connection.play('./sons/stop.mp3');
       } else {
         message.reply('Il faut etre dans le : channel vocal');
     
-    const dispatcher = connection.play('./sons/stop.mp3');
+    
     
 
         }
