@@ -14,7 +14,9 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play('./sons/bonjour.mp3');
+        const dispatcher = connection.play('./sons/bonjour.mp3', {
+            volume: 0.3,
+        });
       } else {
         message.reply('Il faut etre dans le : channel vocal');
     
