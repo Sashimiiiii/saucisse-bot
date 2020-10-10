@@ -13,12 +13,14 @@ module.exports.run = async (bot, message, args) => {
 
     var voiceChannel = message.member.voiceChannel;
     message.delete();
-    voiceChannel.join().then(connection => {
-    console.log("joined channel");
-    const dispatcher = connection.playFile('./sons/A_Man_Has_Fallen_Into_The_River_In_Lego_City_Commercial.mp3');
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+        const dispatcher = connection.play('./sons/A_Man_Has_Fallen_Into_The_River_In_Lego_City_Commercial.mp3');
+      } else {
+        message.reply('Il faut etre dans le : channel vocal');
+        }
     
-}).catch(err => console.log(err));
-isReady = true
+
         }
 module.exports.help = {
     name: "lego"

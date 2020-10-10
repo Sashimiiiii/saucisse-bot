@@ -17,20 +17,16 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
     var n=0;
     
-        voiceChannel.join().then(connection => {
-        console.log("joined channel");
-        const dispatcher = connection.playFile('./sons/caramel.mp3');
-        dispatcher.setVolume(0.1);
-        dispatcher.on("end", end => {
-
-            console.log("fini");}
-        
-        );}
-        
-    ).catch(err => console.log(err));
-    isReady = true}
-        
-
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+        const dispatcher = connection.play('./sons/caramel.mp3', {
+            volume: 0.1,
+        });
+      } else {
+        message.reply('Il faut etre dans le : channel vocal');
+        }
+    
+}
         
 module.exports.help = {
     name: "caramel"
