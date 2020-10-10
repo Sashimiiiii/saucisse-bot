@@ -13,18 +13,22 @@ module.exports.run = async (bot, message, args) => {
 
     var voiceChannel = message.member.voiceChannel;
     message.delete();
-    voiceChannel.join().then(connection => {
-    console.log("joined channel");
-    const dispatcher = connection.playFile('./sons/Xue Hua Piao Piao Best Part.mp3');
-    dispatcher.setVolume(0.1);
-    dispatcher.on("end", end => {
-        console.log("left channel");
-    });
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+        const dispatcher = connection.play('./sons/Xue Hua Piao Piao Best Part.mp3');
+
+        //dispatcher.setVolume(0.1);
+        //dispatcher.on("end", end => {
+          //  console.log("left channel");
+
+      } else {
+        message.reply('Il faut etre dans le : channel vocal');
+    
+    }
     
     
     
-}).catch(err => console.log(err));
-isReady = true
+
         }
 module.exports.help = {
     name: "chant"
