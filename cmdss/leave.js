@@ -12,16 +12,20 @@ module.exports.run = async (bot, message, args) => {
 
     var voiceChannel = message.member.voiceChannel;
     message.delete();
-    voiceChannel.join().then(connection => {
-    console.log("joined channel");
-    const dispatcher = connection.playFile('./sons/o revoir.mp3');
-    dispatcher.on("end", end => {
-        console.log("left channel");
-        voiceChannel.leave();
-    });
-}).catch(err => console.log(err));
-isReady = true
-        }
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.leave();
+        const dispatcher = connection.play('./sons/o revoir.mp3');
+        dispatcher.on('finish', () => {
+            console.log('Finished playing!');
+            connection.leave();
+          });
+      } else {
+        message.reply('Il faut etre dans le : channel vocal');
+    
+
+    
+
+        }}
 module.exports.help = {
     name: "leave"
 }
