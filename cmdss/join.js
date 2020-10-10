@@ -4,32 +4,24 @@ var stream = require("ytdl-core");
 
 module.exports = {
 	name: 'join',
-	description: "Fait rejoindre le bot dans le vocal",
+	description: "Fait rejoindre le bot en vocal",
 }
-
 
 module.exports.run = async (bot, message, args) => {
   
 
-    var voiceChannel = message.member.voiceChannel;
+    var channel = message.member.voiceChannel;
     message.delete();
-    var n=0;
+    if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+      } else {
+        message.reply('Il faut etre dans le : channel vocal');
     
-        voiceChannel.join().then(connection => {
-        console.log("joined channel");
-        const dispatcher = connection.playFile('./sons/bonjour.mp3');
-        dispatcher.setVolume(2.1);
-        dispatcher.on("end", end => {
+    const dispatcher = connection.play('./sons/stop.mp3');
+    
 
-            console.log("bot join");}
-        
-        );}
-        
-    ).catch(err => console.log(err));
-    isReady = true}
-        
-
-        
+        }
+    }
 module.exports.help = {
     name: "join"
 }
