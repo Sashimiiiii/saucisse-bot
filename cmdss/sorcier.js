@@ -5,8 +5,8 @@ var stream = require("ytdl-core");
 
 
 module.exports = {
-	name: 'caramel',
-	description: "Joue caramelldansen",
+	name: 'sorcier',
+	description: "Joue c'est pas sorcier",
 }
 
 
@@ -29,6 +29,6 @@ module.exports.run = async (bot, message, args) => {
 }
         
 module.exports.help = {
-    name: "caramel"
+    name: "sorcier"
 }
 
