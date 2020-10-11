@@ -14,10 +14,8 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=-JH5nhcxSyE', {
-            volume: 0.3,
-        }));
-
+        const dispatcher = connection.play(ytdl('https://www.youtube.com/watch?v=-JH5nhcxSyE');
+					   
       } else {
         message.reply('Il faut etre dans le : channel vocal');
     
