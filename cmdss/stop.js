@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
   
 
     var voiceChannel = message.member.voiceChannel;
+	message.delete();
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./sons/stop.mp3');
