@@ -75,7 +75,7 @@ let prefix = prefixes[message.guild.id].prefixes;
     if(msg.includes("SAUCISSE")) {
         message.react('730772983475339275');
     }
-    if(msg.includes("NOU")) {
+    if(msg.includes("NOU ")) {
         message.react('739896409062506537');
     }
     if(msg.includes("MANU")) {
