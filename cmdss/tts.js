@@ -11,9 +11,9 @@ module.exports = {
 
 module.exports.run = async (bot, message,) => {
 
-    const connection = await message.member.voice.channel.join();
-    message.delete();
+    
     if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
     var prefix = "s!tss" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toUpperCase();
@@ -26,9 +26,7 @@ googleTTS(nom, 'fr', 1)   // speed normal = 1 (default), slow = 0.24
         volume: 0.5,
     });
 })
-.catch(function (err) {
-  console.error(err.stack);
-});
+
 
 
 
