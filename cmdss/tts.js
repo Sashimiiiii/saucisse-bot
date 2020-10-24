@@ -12,7 +12,8 @@ module.exports = {
 module.exports.run = async (bot, message,) => {
 
     const connection = await message.member.voice.channel.join();
-  
+    message.delete();
+    if (message.member.voice.channel) {
     var prefix = "s!tss" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toUpperCase();
@@ -31,9 +32,10 @@ googleTTS(nom, 'fr', 1)   // speed normal = 1 (default), slow = 0.24
 
 
 
+}else {
+    message.reply('Il faut etre dans le : channel vocal');
 }
-
-
+}
 
 
 
