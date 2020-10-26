@@ -10,7 +10,14 @@ bot.on('ready', () => {
     console.log("BOT IS READY");
     bot.user.setActivity("s!help", {type: "STREAMING", url:"https://www.twitch.tv/maki_sashimi"});
     
-}) 
+})
+
+bot.on('guildMemberAdd', member => {
+
+    var role = member.guild.roles.cache.find(r => r.name === "Saucissons");
+    member.roles.add(role).catch(console.error);
+
+}); 
 
 bot.commands = new Discord.Collection();
 
