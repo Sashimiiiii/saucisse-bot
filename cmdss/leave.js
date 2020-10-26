@@ -15,9 +15,10 @@ module.exports.run = async (bot, message, args) => {
     if (message.member.voice.channel) {
         var connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./sons/o revoir.mp3');
-        setTimeout(function(){ 
-            var connection = message.member.voice.channel.leave();
-        }, 3000);
+        dispatcher.on('finish', () => {
+            message.member.voice.channel.leave();
+          });
+       
         
       } else {
         message.reply('Il faut etre dans le : channel vocal');
