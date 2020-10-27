@@ -1,7 +1,10 @@
 const Discord = require("discord.js"); // So6
+
 const fs = require('fs');
 var config = require("./config.json")
 const prefix = "s!"
+const welcome = require ('./oui/welcome.js')
+const adieu = require ('./oui/adieu.js')
 
 
 var bot = new Discord.Client();
@@ -10,14 +13,14 @@ bot.on('ready', () => {
     console.log("BOT IS READY");
     bot.user.setActivity("s!help", {type: "STREAMING", url:"https://www.twitch.tv/maki_sashimi"});
     
+    welcome(bot);
+    adieu(bot);
+    
 })
 
-bot.on('guildMemberAdd', member => {
 
-    var role = member.guild.roles.cache.find(r => r.name === "Saucissons");
-    member.roles.add(role).catch(console.error);
 
-}); 
+  
 
 bot.commands = new Discord.Collection();
 
@@ -59,9 +62,17 @@ if(!prefixes[message.guild.id]){
 let prefix = prefixes[message.guild.id].prefixes;
     
     
+var msg = message.content.toUpperCase();
     
+if(msg.includes('TEST')) {
+    bot.emit('guildMemberAdd', message.member);
+    
+}
 
-    var msg = message.content.toUpperCase();
+if(msg.includes('TAEST')) {
+    bot.emit('guildMemberRemove', message.member);
+    
+}
 
     if(msg.includes('BEYWHEELZ')) {
         message.delete();
@@ -82,11 +93,8 @@ let prefix = prefixes[message.guild.id].prefixes;
     if(msg.includes("SAUCISSE")) {
         message.react('730772983475339275');
     }
-    if(msg.includes("NOU ")) {
+    if(msg.includes("NOU")) {
         message.react('739896409062506537');
-    }
-    if(msg.includes("MANU")) {
-        message.react('731078430145118249');
     }
     if(msg.includes('CHALLENGE')) {
         message.channel.send('Challenge sexe tiktok tit cock 2014 ça tourne mal');
@@ -101,6 +109,10 @@ let prefix = prefixes[message.guild.id].prefixes;
         message.reply("tu veux jouer à kpøp cells ?");
     }
 
+
+
+
+    
     
 var messageArray = message.content.split(/\s+/g);
 var args = messageArray.slice(1);
@@ -109,8 +121,9 @@ var cmd = bot.commands.get(command.slice(prefix.length));
 if(!command.startsWith(prefix)) return;
 if(cmd) cmd.run(bot, message, args);    
 
+
 }) 
 
 
 
-bot.login(process.env.TOKEN)
+bot.login("NzIyNTAxMTE0NDkwMjU3NDQ5.Xuj_mQ.uBSm52yADRe0raxrND4pIuyFzNc")
