@@ -64,7 +64,7 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
-if(msg.includes('TEST')) {
+if(msg.includes('TEAST')) {
     bot.emit('guildMemberAdd', message.member);
     
 }
