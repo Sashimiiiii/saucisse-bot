@@ -8,7 +8,7 @@ const snekfetch = require("snekfetch")
 
     bot.on('guildMemberAdd', async (member)=> {
     
-    const channel = member.guild.channels.cache.find(ch => ch.name === 'bloc-note')    //✋bienvenue
+    const channel = member.guild.channels.cache.find(ch => ch.name === '✋bienvenue')    //✋bienvenue
     //channel.send('Salut <@'+ member.id +'>')
 
     
