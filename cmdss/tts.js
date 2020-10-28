@@ -5,7 +5,7 @@ var googleTTS = require('google-tts-api');
 
 module.exports = {
 	name: 'tts',
-	description: "s!tss [le texte]",
+	description: "s!tts [le texte]",
 }
 
 
