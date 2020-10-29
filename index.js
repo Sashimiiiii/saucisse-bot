@@ -64,16 +64,6 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
-if(msg.includes('TEAST')) {
-    bot.emit('guildMemberAdd', message.member);
-    
-}
-
-if(msg.includes('TAEST')) {
-    bot.emit('guildMemberRemove', message.member);
-    
-}
-
     if(msg.includes('BEYWHEELZ')) {
         message.delete();
         message.reply("BeyMERDE INTERDIT fdp").then(sentMessage => {
