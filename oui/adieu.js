@@ -32,6 +32,8 @@ const snekfetch = require("snekfetch")
     ctx.fillStyle = "#ffffff";
     ctx.textAlign = "center"
     ctx.fillText(member.displayName + ' est parti : enculé de sauce' , 1240, 3400);
+ 
+    
     
     
     const attachment = new Discord.MessageAttachment(

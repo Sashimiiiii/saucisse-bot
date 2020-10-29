@@ -1,12 +1,11 @@
 
 module.exports = (bot) => {
-const Discord = require('discord.js');
+    const Discord = require('discord.js');
 const fs = require('fs');
 const Canvas = require("canvas")
 const snekfetch = require("snekfetch")
 
-
-    bot.on('guildMemberAdd', async (member)=> {
+    bot.on("guildMemberAdd", async member => {
     
     const channel = member.guild.channels.cache.find(ch => ch.name === '✋bienvenue')    //✋bienvenue
     //channel.send('Salut <@'+ member.id +'>')
@@ -38,6 +37,10 @@ const snekfetch = require("snekfetch")
     ctx.textAlign = "center"
     ctx.fillText(member.displayName , 1240, 3400);
     
+    ctx.font = "bold 220px Futura";
+    
+    ctx.fillText('Bienvenue dans la :' , 1240, 600);
+    
     
     const attachment = new Discord.MessageAttachment(
         canvas.toBuffer(),
@@ -47,9 +50,9 @@ const snekfetch = require("snekfetch")
     channel.send(attachment);
     
     
+    
     }
 
-
-
-)
+    
+    )
 }
