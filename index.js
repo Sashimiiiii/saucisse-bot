@@ -80,6 +80,11 @@ var msg = message.content.toUpperCase();
     if(msg.includes('SAUCE')) {
         message.channel.send('Trop nul les sauces');
     }
+    
+    if(msg.includes('MANU')) {
+        message.react('731078430145118249');
+    
+   }
     if(msg.includes("SAUCISSE")) {
         message.react('730772983475339275');
     }
