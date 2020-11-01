@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 {
         message.delete();
         //if(message.member.roles.cache.some(r => r.name === "Producteur en chef")) {
-            if(bot.users.cache.find(user => user.id === '188304318338695168')) {
+            if(message.author.id === '188304318338695168' ) {
             message.channel.send("wesh nico bien ou bien").then(sentMessage => {
                 sentMessage.react('668492192649576490');
             });

@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     {
 {
         message.delete();
-        if(bot.users.cache.find(user => user.id === '87602865064927232')) {
+        if(message.author.id === '87602865064927232') {
             message.channel.send("wesh lydiens bien ou bien").then(sentMessage => {
                 sentMessage.react('668492192649576490');
             });
