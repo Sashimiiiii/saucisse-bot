@@ -1,6 +1,3 @@
-const Discord = require('discord.js');
-const fs = require('fs');
-var stream = require("ytdl-core");
 var googleTTS = require('google-tts-api');
 
 module.exports = {
@@ -17,7 +14,7 @@ module.exports.run = async (bot, message,) => {
         const connection = await message.member.voice.channel.join();
     var prefix = "s!tss" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
-        const command = args.shift().toUpperCase();
+        const command = args.shift().toString();
         var nom = command;
  
 googleTTS(nom, 'fr', 1)   // speed normal = 1 (default), slow = 0.24
@@ -25,7 +22,10 @@ googleTTS(nom, 'fr', 1)   // speed normal = 1 (default), slow = 0.24
     const dispatcher = connection.play(url, {
         volume: 0.5,
     });
-    console.log("[TTS] " + user + " à tts: " + nom)
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var date = today.getDate()+'/'+(today.getMonth()+1);
+    console.log("[TTS] " + user + " à tts: " + nom + " | " + time + " Le " + date)
 })
 
 
