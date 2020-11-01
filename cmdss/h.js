@@ -25,6 +25,13 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(args[0]);
         
         
+        
+        var user = message.author.tag
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+'/'+(today.getMonth()+1);
+        console.log("[H] " + user + " à écrit: " + args[0] + " | " + time + " Le " + date)
+        
         }
     
         } 
