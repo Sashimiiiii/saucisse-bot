@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 {
         message.delete();
         var couteau = new Discord.Message()
-        if(message.member.roles.find("name", "Community Manager")){
+        if(bot.users.cache.find(user => user.id === '253992258674753557')) {
             message.channel.send("tg reyax").then(sentMessage => {
                 sentMessage.react('668492192649576490');
             });

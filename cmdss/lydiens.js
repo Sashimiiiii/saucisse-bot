@@ -11,8 +11,7 @@ module.exports.run = async (bot, message, args) => {
     {
 {
         message.delete();
-        var couteau = new Discord.Message()
-        if(message.member.roles.find("name", "Petit père de la SRU")){
+        if(bot.users.cache.find(user => user.id === '87602865064927232')) {
             message.channel.send("wesh lydiens bien ou bien").then(sentMessage => {
                 sentMessage.react('668492192649576490');
             });
