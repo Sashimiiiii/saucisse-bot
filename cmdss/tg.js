@@ -17,6 +17,11 @@ module.exports.run = async (bot, message, args) => {
         var nom = command;
         message.channel.send("TA GUEULE "+ nom + " PUTAIN FERME TA GUEULE T4ES NUL T4ES QUUNE MERDE :mountain_cableway:ARRETE AVEC TES ANALYSES DE MERDE "+ nom + " TA VOIX 🤼‍♂INSSUPORTTABLE TA :necktie::necktie:GUEULE DE MERDE MONTRE LA PAS TU VAS RECEVOIR MES POINGS DEDANS JE VAIS T4EXPLOSER:office:PARLE ENCORE UNE FOIS JE TE DETRUIS "+ nom + " §§§§§")
         
+	var user = message.author.tag
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+'/'+(today.getMonth()+1);
+        console.log("[TG] " + user + " à utilisé TG sur " + nom + " | " + time + " Le " + date)
     }
 }
 }
