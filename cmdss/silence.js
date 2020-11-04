@@ -9,9 +9,8 @@ module.exports = {
 }
 
 module.exports.run = async (bot, message, args, client) => {
-	message.delete();
 
-    const member = message.guild.member(message.mentions.users.first());
+    var member = message.guild.member(message.mentions.users.first());
 
 
 const canvas = Canvas.createCanvas(742, 560);
@@ -37,6 +36,16 @@ const attachment = new Discord.MessageAttachment(
      );
 
 message.channel.send(attachment);
+
+
+
+var user = message.author.tag
+        var member = member.displayName
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+'/'+(today.getMonth()+1);
+        console.log("[SILENCE] " + user + " à utilisé Silence sur " + member + " | " + time + " Le " + date)
+
 
 }
 
