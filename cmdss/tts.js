@@ -8,6 +8,7 @@ module.exports = {
 
 module.exports.run = async (bot, message,) => {
 
+	message.delete();
     var user = message.author.tag
 
     if (message.member.voice.channel) {
