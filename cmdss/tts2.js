@@ -7,7 +7,8 @@ module.exports = {
 
 
 module.exports.run = async (bot, message,) => {
-
+	
+	message.delete();
     var user = message.author.tag
 
         const connection = await bot.channels.cache.get("756241429923102751");
