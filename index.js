@@ -1,10 +1,7 @@
 const Discord = require("discord.js"); // So6
-
 const fs = require('fs');
-var config = require("./config.json")
-const prefix = "s!"
-const welcome = require ('./oui/welcome.js')
-const adieu = require ('./oui/adieu.js')
+const welcome = require ('./oui/welcome')
+const adieu = require ('./oui/adieu')
 
 
 var bot = new Discord.Client();
@@ -12,20 +9,25 @@ var bot = new Discord.Client();
 bot.on('ready', () => {        
     console.log("BOT IS READY");
     bot.user.setActivity("s!help", {type: "STREAMING", url:"https://www.twitch.tv/maki_sashimi"});
+})
     
+
+bot.on('ready', () => {        
+   
     welcome(bot);
     adieu(bot);
-    
 })
 
-
+   
+    
+    
 
   
 
 bot.commands = new Discord.Collection();
 
 function loadCmds() {
-    fs.readdir("./cmdss/", (err, files) => {
+    fs.readdir("./cmdss/ecrit/", (err, files) => {
         if(err) console.erroe(err);
         var jsFiles = files.filter(f => f.split(".").pop() === "js");
         if(jsFiles.length <= 0) {
@@ -34,15 +36,35 @@ function loadCmds() {
         }
         console.log(`${jsFiles.length} commandes chargées.`);
         jsFiles.forEach((f, i) => {
-            delete require.cache[require.resolve(`./cmdss/${f}`)];
-            var props = require(`./cmdss/${f}`);
+            delete require.cache[require.resolve(`./cmdss/ecrit/${f}`)];
+            var props = require(`./cmdss/ecrit/${f}`);
             console.log(`${i + 1}: ${f} chargé`);
             bot.commands.set(props.help.name, props); 
         })
     })
 };
 
+
+
+function loadCmds2() {
+    fs.readdir("./cmdss/vocal/", (err, files) => {
+        if(err) console.erroe(err);
+        var jsFiles = files.filter(f => f.split(".").pop() === "js");
+        if(jsFiles.length <= 0) {
+            console.log("Aucune commande à chargé.")
+            return;
+        }
+        console.log(`${jsFiles.length} commandes chargées.`);
+        jsFiles.forEach((f, i) => {
+            delete require.cache[require.resolve(`./cmdss/vocal/${f}`)];
+            var props = require(`./cmdss/vocal/${f}`);
+            console.log(`${i + 1}: ${f} chargé`);
+            bot.commands.set(props.help.name, props); 
+        })
+    })
+};
 loadCmds();
+loadCmds2();
 
 bot.on('message', message => {
 
@@ -64,6 +86,16 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
+if(msg.includes('TEAST')) {
+    bot.emit('guildMemberAdd', message.member);
+    
+}
+
+if(msg.includes('TAEST')) {
+    bot.emit('guildMemberRemove', message.member);
+    
+}
+
     if(msg.includes('BEYWHEELZ')) {
         message.delete();
         message.reply("BeyMERDE INTERDIT fdp").then(sentMessage => {
@@ -80,11 +112,6 @@ var msg = message.content.toUpperCase();
     if(msg.includes('SAUCE')) {
         message.channel.send('Trop nul les sauces');
     }
-    
-    if(msg.includes('MANU')) {
-        message.react('731078430145118249');
-    
-   }
     if(msg.includes("SAUCISSE")) {
         message.react('730772983475339275');
     }
@@ -103,11 +130,9 @@ var msg = message.content.toUpperCase();
         message.delete();
         message.reply("tu veux jouer à kpøp cells ?");
     }
-
-
-
-
     
+
+        
     
 var messageArray = message.content.split(/\s+/g);
 var args = messageArray.slice(1);
