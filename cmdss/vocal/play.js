@@ -11,12 +11,8 @@ module.exports = {
 
 
 module.exports.run = async (bot, message, args) => {
-  
 
-
-    message.delete();
-
-    
+ 
     if (message.member.voice.channel) {
         var prefix = "s!play" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
