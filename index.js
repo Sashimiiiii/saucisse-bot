@@ -115,6 +115,10 @@ if(msg.includes('TAEST')) {
     if(msg.includes("SAUCISSE")) {
         message.react('730772983475339275');
     }
+    
+    if(msg.includes("MANU")) {
+        message.react('780023909449596939');
+    }
     if(msg.includes("NOU")) {
         message.react('739896409062506537');
     }
