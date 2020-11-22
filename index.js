@@ -108,7 +108,7 @@ var msg = message.content.toUpperCase();
     }
     
     if(msg.includes("MANU")) {
-        message.react('780023909449596939');
+        message.react('731078430145118249');
     }
     if(msg.includes("NOU")) {
         message.react('739896409062506537');
