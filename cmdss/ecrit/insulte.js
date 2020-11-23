@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) => {
         message.delete();
         var roll = Math.floor(Math.random() * 23) + 1;
         var couteau = new Discord.Message()
-        let nom = message.guild.member(message.mentions.users.first());
+        var nom = message.guild.member(message.mentions.users.first());
+        var nom = "<@!" + nom + ">"
         if (!nom){
             return message.channel.send("L'utilisateur n'existe pas");
         }
