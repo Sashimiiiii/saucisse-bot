@@ -13,10 +13,9 @@ module.exports.run = async (bot, message, args) => {
         
         message.delete();
         var roll = Math.floor(Math.random() * 23) + 1;
-        var couteau = new Discord.Message()
-        var nom = message.guild.member(message.mentions.users.first());
-        var nom = "<@!" + nom + ">"
-        if (!nom){
+        var ping = message.guild.member(message.mentions.users.first());
+        var nom = "<@!" + ping + ">"
+        if (!ping){
             return message.channel.send("L'utilisateur n'existe pas");
         }
         
@@ -112,31 +111,12 @@ module.exports.run = async (bot, message, args) => {
             message.channel.send(nom +" sale fécalomes")
         }
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+        var user = message.author.tag
+        var ping = ping.displayName
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+'/'+(today.getMonth()+1);
+        console.log("[INSULTE] " + user + " a Insulter: " + ping + " | " + time + " Le " + date)
    
    
     } 
