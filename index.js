@@ -86,6 +86,9 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
+    if(msg.includes('AIRFALL WAS HERE')) {
+        message.channel.send('No, airfall was not here!');
+    }
 
     if(msg.includes('BEYWHEELZ')) {
         message.delete();
