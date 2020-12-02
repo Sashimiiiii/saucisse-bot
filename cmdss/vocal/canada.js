@@ -3,15 +3,15 @@ const fs = require('fs');
 const tts = require('google-translate-tts');
 
 module.exports = {
-	name: 'tts',
-	description: "s!tts (le texte)",
+	name: 'canada',
+	description: "s!tts (le texte mais en canadien)",
 }
 
 
 module.exports.run = async (bot, message,) => {
     message.delete();
 
-    var prefix = "canada" ;
+    var prefix = "s!canada" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toString();
         var nom = command;
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message,) => {
 const saveFile = async () => {
     const buffer = await tts.synthesize({
         text: nom,
-        voice: 'fr-FR'
+        voice: 'fr-CA'
     });
 
     fs.writeFileSync('hello-world.mp3', buffer);
@@ -51,5 +51,5 @@ var user = message.author.tag
 }
         
 module.exports.help = {
-    name: "tts"
+    name: "canada"
 }

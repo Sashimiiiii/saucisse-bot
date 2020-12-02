@@ -35,6 +35,12 @@ saveFile();
     });
 
 
+
+    var user = message.author.tag
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var date = today.getDate()+'/'+(today.getMonth()+1);
+    console.log("[TTS2] " + user + " a tts: " + nom + " | " + time + " Le " + date)
 }
         
 module.exports.help = {
