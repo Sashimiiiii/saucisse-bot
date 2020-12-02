@@ -11,7 +11,7 @@ module.exports = {
 module.exports.run = async (bot, message,) => {
     message.delete();
 
-    var prefix = "canada" ;
+    var prefix = "s!tts" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toString();
         var nom = command;
@@ -32,7 +32,7 @@ if (message.member.voice.channel) {
     const connection = await message.member.voice.channel.join();
     setTimeout(() => {
        
-        console.log(buffer);
+        
         const dispatcher = connection.play('./hello-world.mp3', {
             volume: 0.5,
         });
