@@ -30,9 +30,13 @@ saveFile();
 
 if (message.member.voice.channel) {
     const connection = await message.member.voice.channel.join();
-    const dispatcher = connection.play('./hello-world.mp3', {
-        volume: 0.5,
-    });
+    setTimeout(() => {
+       
+        
+        const dispatcher = connection.play('./hello-world.mp3', {
+            volume: 0.5,
+        });
+    }, 1000);
 }else {
     message.reply('Il faut etre dans le : channel vocal');
 }
