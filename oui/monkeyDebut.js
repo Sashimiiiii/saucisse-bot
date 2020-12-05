@@ -6,7 +6,7 @@ const d = new Date();
 
 
 console.log('Before job instantiation');
-const job = new CronJob('00 00 00 * * 6', function() {
+const job = new CronJob('00 00 01 * * 6', function() {
   console.log('At Ten Minutes:', d);
   
   
