@@ -1,7 +1,10 @@
 const Discord = require("discord.js"); // So6
 const fs = require('fs');
-const welcome = require ('./oui/welcome')
-const adieu = require ('./oui/adieu')
+const welcome = require ('./oui/welcome');
+const adieu = require ('./oui/adieu');
+const monkeyDebut = require("./oui/monkeyDebut");
+const monkeyFin = require("./oui/monkeyFin");
+const test = require("./oui/test");
 
 
 var bot = new Discord.Client();
@@ -16,6 +19,9 @@ bot.on('ready', () => {
    
     welcome(bot);
     adieu(bot);
+    monkeyDebut(bot);
+    monkeyFin(bot);
+    test(bot)
 })
 
    
