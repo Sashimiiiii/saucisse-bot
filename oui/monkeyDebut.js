@@ -12,7 +12,7 @@ const job = new CronJob('00 00 01 * * 6', function() {
   
   
  
-  const channel = bot.channels.cache.get("641923235075850241");
+  const channel = bot.channels.cache.get("730527992148656211");
   channel.send("OUOUOAHAHHOUOU MONKEY MONKEY")
 
 
