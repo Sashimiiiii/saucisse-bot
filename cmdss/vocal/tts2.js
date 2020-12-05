@@ -27,7 +27,6 @@ const saveFile = async () => {
 };
 
 saveFile();
-hello-world.mp3
 
     const connection = await bot.channels.cache.get("756241429923102751");
     setTimeout(() => {
