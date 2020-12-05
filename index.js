@@ -90,6 +90,10 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
+    if(msg.includes("CHORUS")) {
+        message.react('746041025147174973');
+    }
+    
     if(msg.includes('AIRFALL WAS HERE')) {
         message.channel.send('No, airfall was not here!');
     }
