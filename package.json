@@ -11,6 +11,7 @@
     "@discordjs/opus": "^0.3.3",
     "assistant-notifier": "^2.1.10",
     "canvas": "^2.6.1",
+    "cron": "^1.8.2",
     "discord-tts": "^1.0.2",
     "discord.js": "^12.5.1",
     "ffmpeg-binaries": "^3.2.2-3",
