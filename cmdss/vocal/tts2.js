@@ -3,7 +3,7 @@ const fs = require('fs');
 const tts = require('google-translate-tts');
 
 module.exports = {
-	name: 'tts',
+	name: 'tts2',
 	description: "pareil que au dessus mais ça met dans vocal among us",
 }
 
