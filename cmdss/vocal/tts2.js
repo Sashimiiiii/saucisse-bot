@@ -31,17 +31,16 @@ saveFile();
     const connection = await bot.channels.cache.get("756241429923102751");
     setTimeout(() => {
        
-        
+        connection.join().then(connection => {
         const dispatcher = connection.play('./hello-world.mp3', {
             volume: 0.5,
         });
         dispatcher.on('finish', () => {
             fs.rename('hello-world.mp3', 'old.mp3', err => {
-                if (err) {
-                  return console.error(err)
-                }
+               
             })
         });
+    })
     }, 1000);
    
 
