@@ -6,7 +6,7 @@ const d = new Date();
 const channel = bot.channels.cache.get("730527992148656211");
 
 console.log('Before job instantiation');
-const job = new CronJob('00 50 01 * * 0', function() {
+const job = new CronJob('00 00 03 * * 0', function() {
   console.log('Fin du monkey samedi:', d);
   
   
