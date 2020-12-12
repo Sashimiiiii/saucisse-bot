@@ -19,7 +19,7 @@ const job = new CronJob('00 00 23 * * 6', function() {
       guild.members.cache.forEach(member => {
         member.roles.remove('787108377348014080');
         });
-      console.log("role monkey rajouté")
+      console.log("role monkey enlevé")
 
 });
 console.log('After job instantiation', d);
