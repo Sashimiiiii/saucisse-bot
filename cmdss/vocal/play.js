@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play(await ytdl(url), { 
             type: 'opus',
-            volume: 0.05, 
+            volume: 0.5, 
         
         });
       } else {
