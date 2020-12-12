@@ -15,6 +15,11 @@ const job = new CronJob('00 00 23 * * 6', function() {
   
   channel.send("Funky monkey samedi fini je : pleure")
 
+  let guild = bot.guilds.cache.get("730433603808264192");
+      guild.members.cache.forEach(member => {
+        member.roles.remove('787108377348014080');
+        });
+      console.log("role monkey rajouté")
 
 });
 console.log('After job instantiation', d);
