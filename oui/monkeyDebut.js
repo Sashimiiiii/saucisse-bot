@@ -4,8 +4,6 @@ module.exports = (bot) => {
 const Discord = require('discord.js');
 const d = new Date();
 
-
-console.log('Before job instantiation');
 const job = new CronJob('00 00 23 * * 5', function() {
   console.log('Monkey debut:', d);
   
