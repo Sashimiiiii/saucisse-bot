@@ -22,7 +22,6 @@ const job = new CronJob('00 00 23 * * 5', function() {
       console.log("role monkey rajouté")
 
 });
-console.log('After job instantiation', d);
 job.start();
 
 }
