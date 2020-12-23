@@ -22,7 +22,7 @@ module.exports.run = async (bot, message) => {
 
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        connection.play(ytdl(url, {filter : 'audioonly'});
+        connection.play(ytdl(url, {filter : 'audioonly'}));
      
 
     }else {
