@@ -17,7 +17,7 @@ bot.on('ready', () => {
 bot.on('ready', () => {        
    
     welcome(bot);
-
+    adieu(bot);
     monkeyDebut(bot);
     monkeyFin(bot);
 })
