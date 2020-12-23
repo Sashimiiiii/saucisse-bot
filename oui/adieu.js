@@ -8,7 +8,7 @@ const snekfetch = require("snekfetch")
 
     bot.on('guildMemberRemove', async (member)=> {
     
-    const channel = member.guild.channels.cache.find(ch => ch.name === '✋bienvenue')    //✋bienvenue
+    const channel = member.guild.channels.cache.find(ch => ch.id === '791274069022212096');
     //channel.send('Salut <@'+ member.id +'>')
 
     
