@@ -124,18 +124,18 @@ var msg = message.content.toUpperCase();
     if(msg.includes("NOU")) {
         message.react('739896409062506537');
     }
-    if(msg.includes('CHALLENGE')) {
-        message.channel.send('Challenge sexe tiktok tit cock 2014 ça tourne mal');
-    }
+   
+      
+    
     if(msg.includes('PIZZA')) {
         message.channel.send("```\nDomino's Pizza\n```", { files: ["./images/dominos.mp4"]});
     }
 
           
-     if(msg.includes('KPOP')) {
-        message.delete();
-        message.reply("tu veux jouer à kpøp cells ?");
-    }
+    
+        
+        
+
     
 
         
