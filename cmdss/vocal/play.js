@@ -15,7 +15,7 @@ module.exports.run = async (bot, message) => {
 
     message.delete();
 
-    var prefix = "s!play2" ;
+    var prefix = "s!play" ;
         
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const url = args.shift().toString();
@@ -37,6 +37,6 @@ module.exports.run = async (bot, message) => {
 
         
 module.exports.help = {
-    name: "play2"
+    name: "play"
 }
 
