@@ -21,8 +21,8 @@
     "opusscript": "0.0.7",
     "simple-youtube-api": "^5.2.1",
     "snekfetch": "^4.0.4",
-    "ytdl-core": "^1.0.9",
-    "ytdl-core-discord": "^1.2.4",
+    "ytdl-core": "^4.2.1",
+    "ytdl-core-discord": "^1.2.5",
     "ytpl": "^1.0.1"
   },
   "devDependencies": {},
