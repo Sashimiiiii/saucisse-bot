@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-var ytdl = require("ytdl-core-discord");
+const ytdl = require("ytdl-core");
+var ffmpeg = require('ffmpeg');
 
 
 
@@ -10,24 +11,31 @@ module.exports = {
 }
 
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message) => {
+  
 
- 
-    if (message.member.voice.channel) {
-        var prefix = "s!play" ;
+    message.delete();
+
+    var prefix = "s!play" ;
+        
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const url = args.shift().toString();
+
+    if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play(await ytdl(url), { 
-            type: 'opus',
-            volume: 0.5, 
-        
-        });
-      } else {
+        connection.play(ytdl(url, {
+            volume: 0.1,
+        }));
+     
+
+    }else {
         message.reply('Il faut etre dans le : channel vocal');
         }
-    
+
+        
 }
+
+
         
 module.exports.help = {
     name: "play"
