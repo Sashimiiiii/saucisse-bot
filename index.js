@@ -111,9 +111,9 @@ var msg = message.content.toUpperCase();
         .setImage("https://media.discordapp.net/attachments/730527992148656211/739934124264915025/received_3263177790387217.jpeg");
         message.channel.send(couteau)
     }
-    if(msg.includes('SAUCE')) {
-        message.channel.send('Trop nul les sauces');
-    }
+
+
+
     if(msg.includes("SAUCISSE")) {
         message.react('730772983475339275');
     }
