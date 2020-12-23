@@ -1,31 +1,28 @@
 {
-  "name": "dod",
+  "name": "c",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Z",
-  "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
     "assistant-notifier": "^2.1.11",
     "canvas": "^2.6.1",
     "cron": "^1.8.2",
-    "discord-tts": "^1.0.3",
     "discord.js": "^12.5.1",
-    "ffmpeg-binaries": "^3.2.2-3",
+    "discord-tts": "^1.0.3",
     "ffmpeg-static": "^4.2.7",
     "google-translate-tts": "^0.1.0",
-    "google-tts-api": "0.0.5",
-    "opusscript": "0.0.7",
-    "simple-youtube-api": "^5.2.1",
+    "google-tts-api": "^0.0.5",
+    "opusscript": "^0.0.7",
     "snekfetch": "^4.0.4",
+    "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^4.2.1",
-    "ytdl-core-discord": "^1.2.5",
-    "ytpl": "^1.0.1"
+    "ytpl": "^1.0.1",
+    "ytdl-core-discord": "^1.2.5"
   },
   "devDependencies": {},
-  "keywords": [],
-  "description": ""
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
