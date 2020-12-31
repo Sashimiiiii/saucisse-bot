@@ -15,6 +15,12 @@ module.exports.run = async (bot, message,) => {
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toString();
         var nom = command;
+	
+	var stringLength = nom.length;
+if (stringLength > 199) {
+    message.reply("message etre comme : plus de 200 caractères = pas bien");
+    return;
+}
 
 // notice that `tts.synthesize` returns a Promise<Buffer>
 const saveFile = async () => {
