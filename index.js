@@ -10,7 +10,7 @@ var bot = new Discord.Client();
 
 bot.on('ready', () => {        
     console.log("BOT IS READY");
-    bot.user.setActivity("s!help", {type: "STREAMING", url:"discord.gg/ZHJCKYe"});
+    bot.user.setActivity("s!help", {type: "LISTENING"});
 })
     
 
