@@ -11,12 +11,19 @@ module.exports.run = async (bot, message, args) => {
     {
 {
         message.delete();
-        var couteau = new Discord.Message()
+        
         let destinataire = message.guild.member(message.mentions.users.first());
         if (!destinataire){
             return message.channel.send("L'utilisateur n'existe pas");
         }
-        destinataire.send(args.join(" "));
+var prefix = "s!mp" ;
+        
+        const args = message.content.slice(prefix.length).trim().split('/ +/');
+       
+        if (args[0] === "") {
+            return message.channel.send(`Écris au moins un mot, ${message.author}!`);
+        }
+        destinataire.send(args);
         } 
     }
 }
