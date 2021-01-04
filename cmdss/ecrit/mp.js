@@ -23,7 +23,7 @@ var prefix = "s!mp" ;
         if (args[0] === "") {
             return message.channel.send(`Écris au moins un mot, ${message.author}!`);
         }
-        destinataire.send(args);
+        destinataire.send(args[1]);
         } 
     }
 }
