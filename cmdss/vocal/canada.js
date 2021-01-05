@@ -15,12 +15,12 @@ module.exports.run = async (bot, message,) => {
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toString();
         var nom = command;
-	
-	var stringLength = nom.length;
-if (stringLength > 199) {
-    message.reply("message etre comme : plus de 200 caractères = pas bien");
-    return;
-}
+
+        var stringLength = nom.length;
+        if (stringLength > 199) {
+            message.reply("message etre comme : plus de 200 caractères = pas bien");
+            return;
+        }
 
 // notice that `tts.synthesize` returns a Promise<Buffer>
 const saveFile = async () => {
@@ -59,8 +59,16 @@ var user = message.author.tag
     var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var date = today.getDate()+'/'+(today.getMonth()+1);
-    console.log("[TTS] " + user + " a tts: " + nom + " | " + time + " Le " + date)
+    console.log("[CANADA] " + user + " a tts: " + nom + " | " + time + " Le " + date)
 
+    if (message.guild.id == 730433603808264192) {
+        
+        
+        const channel = message.guild.channels.cache.get("795755947879825408")
+        
+   
+        channel.send("[CANADA] " + user + " a tts: " + nom + " | " + time + " Le " + date);
+    }
 }
         
 module.exports.help = {
