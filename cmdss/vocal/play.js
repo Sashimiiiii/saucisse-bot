@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const ytdl = require("ytdl-core");
-var ffmpeg = require('ffmpeg');
 
 
 
@@ -16,7 +15,7 @@ module.exports.run = async (bot, message) => {
 
     message.delete();
 
-    var prefix = "z!play" ;
+    var prefix = "s!play" ;
         
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const url = args.shift().toString();
