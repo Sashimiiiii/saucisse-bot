@@ -7,7 +7,6 @@ const snekfetch = require("snekfetch")
 
     bot.on("guildMemberAdd", async member => {
 
-        if (message.guild.id == "730433603808264192"){
 
            
         
@@ -57,7 +56,7 @@ const snekfetch = require("snekfetch")
     
     
     }
-}
+
 
     
     )
