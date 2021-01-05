@@ -1,12 +1,17 @@
 
 module.exports = (bot) => {
-    const Discord = require('discord.js');
+const Discord = require('discord.js');
 const fs = require('fs');
 const Canvas = require("canvas")
 const snekfetch = require("snekfetch")
 
     bot.on("guildMemberAdd", async member => {
-    
+
+        if (message.guild.id != 730433603808264192){
+
+            return
+        }
+
     const channel = member.guild.channels.cache.find(ch => ch.id === '744284383187304551');
     //channel.send('Salut <@'+ member.id +'>')
 
