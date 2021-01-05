@@ -64,6 +64,14 @@ var user = message.author.tag
         var date = today.getDate()+'/'+(today.getMonth()+1);
         console.log("[kiryu] " + user + " a utilisé Kiryu"+ " | " + time + " Le " + date)
 
+        if (message.guild.id == 730433603808264192) {
+        
+        
+        
+            const channel = message.guild.channels.cache.get("795755947879825408")
+            channel.send("[kiryu] " + user + " a utilisé Kiryu"+ " | " + time + " Le " + date);
+        }
+
 
 }
  

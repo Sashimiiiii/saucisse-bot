@@ -84,6 +84,18 @@ module.exports.run = async (bot, message, args) => {
 
     }
 
+
+    if (message.guild.id == 730433603808264192) {
+        
+        
+        const channel = message.guild.channels.cache.get("795755947879825408")
+        var user = message.author.tag
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+'/'+(today.getMonth()+1);
+   
+        channel.send("[MEME] " + user + " a utiliser Meme | " + time + " Le " + date);
+    }
     
 }
 

@@ -11,7 +11,7 @@ module.exports.run = async (bot, message,) => {
     message.delete();
     
     
-if(message.member.roles.cache.some(r => r.name === "Ultra Saucisses")) {
+if(message.member.roles.cache.some(r => r.name === "Ultra Saucisses") || (message.member.hasPermission('ADMINISTRATOR'))) {
     var user = message.author.tag
     const args = message.content.split(' ').slice(1); // All arguments behind the command name with the prefix
     const amount = args.join(' '); // Amount of messages which should be deleted
@@ -28,8 +28,16 @@ if(message.member.roles.cache.some(r => r.name === "Ultra Saucisses")) {
    var today = new Date();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var date = today.getDate()+'/'+(today.getMonth()+1);
-    console.log("[CLEAN] " + user + " à clean: " + args + " messages | " + time + " Le " + date)
-
+    console.log("[CLEAR] " + user + " à clear: " + args + " messages | " + time + " Le " + date)
+   
+    if (message.guild.id == 730433603808264192) {
+        
+        
+        const channel = message.guild.channels.cache.get("795755947879825408")
+        
+        
+        channel.send("[CLEAR] " + user + " à clear: " + args + " messages | " + time + " Le " + date);
+    }
    
 }
 

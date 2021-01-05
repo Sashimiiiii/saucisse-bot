@@ -6,10 +6,10 @@ module.exports = {
 	description: "Envoie le texte NRV",
 }
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message) => {
 
-    {
-{
+    
+
         message.delete();
         var prefix = "s!tg" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
@@ -24,8 +24,16 @@ module.exports.run = async (bot, message, args) => {
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var date = today.getDate()+'/'+(today.getMonth()+1);
         console.log("[TG] " + user + " a utilisé TG sur " + member + " | " + time + " Le " + date)
-    }
-}
+    
+        if (message.guild.id == 730433603808264192) {
+        
+        
+            const channel = message.guild.channels.cache.get("795755947879825408")
+            
+            
+            channel.send("[TG] " + user + " a utilisé TG sur " + member + " | " + time + " Le " + date);
+        }
+
 }
 module.exports.help = {
     name: "tg"

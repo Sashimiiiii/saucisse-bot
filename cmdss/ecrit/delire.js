@@ -48,6 +48,16 @@ var user = message.author.tag
         var date = today.getDate()+'/'+(today.getMonth()+1);
         console.log("[DELIRE] " + user + " a utilisé DELIRE sur " + member + " | " + time + " Le " + date)
 
+        
+        if (message.guild.id == 730433603808264192) {
+        
+        
+            const channel = message.guild.channels.cache.get("795755947879825408")
+            
+            
+            channel.send("[DELIRE] " + user + " a utilisé DELIRE sur " + member + " | " + time + " Le " + date);
+        }
+
 
 }
 
