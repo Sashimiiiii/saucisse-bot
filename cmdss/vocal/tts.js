@@ -11,6 +11,9 @@ module.exports = {
 module.exports.run = async (bot, message,) => {
     message.delete();
 
+    if (!bot.user.hasPermission("MANAGE_ROLES")) {
+        message.channel.send("j'ai pas les permissions :(")
+    }
     var prefix = "s!tts" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toString();
@@ -25,7 +28,7 @@ if (stringLength > 199) {
 const saveFile = async () => {
     const buffer = await tts.synthesize({
         text: nom,
-        voice: 'ja-FR'
+        voice: 'fr-FR'
     });
 
     fs.writeFileSync('hello-world.mp3', buffer);
