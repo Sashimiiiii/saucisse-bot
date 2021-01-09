@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     
 
         message.delete();
-        let destinataire = message.guild.member(message.mentions.users.first());
+        var destinataire = message.guild.member(message.mentions.users.first());
         if (!destinataire){
             return message.channel.send("L'utilisateur n'existe pas");
         }
