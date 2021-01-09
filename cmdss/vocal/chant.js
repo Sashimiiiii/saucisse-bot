@@ -13,10 +13,15 @@ module.exports.run = async (bot, message, args) => {
 
     var voiceChannel = message.member.voiceChannel;
     message.delete();
+
+    if (!message.guild.me.hasPermission("SPEAK")) {
+        message.channel.send("j'ai pas les permissions :(")
+    }
+
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./sons/Xue Hua Piao Piao Best Part.mp3', {
-            volume: 0.1,
+            volume: 0.5,
         });
 
         //dispatcher.setVolume(0.1);

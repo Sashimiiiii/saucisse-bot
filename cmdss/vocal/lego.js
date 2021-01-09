@@ -13,10 +13,13 @@ module.exports.run = async (bot, message, args) => {
 
     var voiceChannel = message.member.voiceChannel;
     message.delete();
+    if (!bot.user.hasPermission("SPEAK")) {
+        message.channel.send("j'ai pas les permissions :(")
+    }
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./sons/A_Man_Has_Fallen_Into_The_River_In_Lego_City_Commercial.mp3', {
-            volume: 0.1,
+            volume: 0.5,
         });
       } else {
         message.reply('Il faut etre dans le : channel vocal');

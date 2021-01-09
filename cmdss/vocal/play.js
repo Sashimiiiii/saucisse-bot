@@ -14,6 +14,9 @@ module.exports.run = async (bot, message) => {
   
 
     message.delete();
+    if (!bot.user.hasPermission("MANAGE_ROLES")) {
+        message.channel.send("j'ai pas les permissions :(")
+    }
 
     var prefix = "s!play" ;
         
