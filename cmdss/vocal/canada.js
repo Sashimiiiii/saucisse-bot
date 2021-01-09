@@ -11,6 +11,11 @@ module.exports = {
 module.exports.run = async (bot, message,) => {
     message.delete();
 
+    if (!bot.user.hasPermission("MANAGE_ROLES")) {
+        message.channel.send("j'ai pas les permissions :(")
+    }
+
+
     var prefix = "s!canada" ;
         const args = message.content.slice(prefix.length).trim().split('/ +/');
         const command = args.shift().toString();
