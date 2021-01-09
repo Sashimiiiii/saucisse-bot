@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, member) => {
 
     if (!message.guild.me.hasPermission("SPEAK")) {
         message.channel.send("j'ai pas les permissions :(")
+        return;
     }
 
     if (message.member.voice.channel) {

@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
     message.delete();
     if (!message.guild.me.hasPermission("SPEAK")) {
         message.channel.send("j'ai pas les permissions :(")
+        return;
     }
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();

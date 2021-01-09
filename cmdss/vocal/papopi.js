@@ -12,8 +12,9 @@ module.exports.run = async (bot, message, args) => {
   
 
     message.delete();
-    if (!bot.user.hasPermission("MANAGE_ROLES")) {
+    if (!message.guild.me.hasPermission("SPEAK")) {
         message.channel.send("j'ai pas les permissions :(")
+        return;
     }
 
     if (message.member.voice.channel) {

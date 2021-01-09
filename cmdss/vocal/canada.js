@@ -13,6 +13,7 @@ module.exports.run = async (bot, message,) => {
 
     if (!message.guild.me.hasPermission("SPEAK")) {
         message.channel.send("j'ai pas les permissions :(")
+        return;
     }
 
     var prefix = "s!canada" ;
