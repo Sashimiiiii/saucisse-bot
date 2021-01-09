@@ -15,18 +15,27 @@ module.exports.run = async (bot, message, args) => {
         if (!destinataire){
             return message.channel.send("L'utilisateur n'existe pas");
         }
-        destinataire.send(args.join(" "));
-        
-        if (message.guild.id == 730433603808264192) {
+    
         
         
-            const channel = message.guild.channels.cache.get("795755947879825408")
+
+
+        var [user, ...restArgs] = args;
+        var text = restArgs.join(' ');
+
+        destinataire.send(text);
+
+
+if (message.guild.id == 730433603808264192) {
+    
+        
+    const channel = message.guild.channels.cache.get("795755947879825408")
             var user = message.author.tag
             var today = new Date();
             var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
             var date = today.getDate()+'/'+(today.getMonth()+1);
        
-            channel.send("[MP] " + user + " a mp" + args +" à" + destinataire + " | " + time + " Le " + date);
+            channel.send("[MP] " + user + " a mp" + text +" à" + destinataire + " | " + time + " Le " + date);
         }
     
 }
