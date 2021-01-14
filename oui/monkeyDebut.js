@@ -11,7 +11,7 @@ const job = new CronJob('00 00 23 * * 5', function() {
   
  
   const channel = bot.channels.cache.get("730527992148656211");
-  channel.send("OUOUOAHAHHOUOU MONKEY MONKEY")
+  channel.send("OUOUOAHAHHOUOU MONKEY MONKEY", { files: ["./images/monkey.mp4"]});
 
   let guild = bot.guilds.cache.get("730433603808264192");
       guild.members.cache.forEach(member => {
