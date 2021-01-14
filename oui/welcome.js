@@ -18,12 +18,12 @@ const snekfetch = require("snekfetch")
     
 //setTimeout(() => {
     console.log(member.displayName +' a rejoin le serveur')
-if(!member.roles.cache.find(r => r.name === "SINGE"))
-{
+// if(!member.roles.cache.find(r => r.name === "SINGE"))
+// {
     var role = member.guild.roles.cache.find(r => r.name === "Saucissons");
     member.roles.add(role).catch(console.error);
 
-}
+// }
     
 //}, 3000);
     
