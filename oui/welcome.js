@@ -7,7 +7,7 @@ const snekfetch = require("snekfetch")
 
     bot.on("guildMemberAdd", async (bot, member) => {
 
-        if (bot.guilds.get == 730433603808264192){
+
 
            
         
@@ -59,7 +59,7 @@ const snekfetch = require("snekfetch")
     
     
     
-    }
+    
 }
 
     
