@@ -94,8 +94,32 @@ var msg = message.content.toUpperCase();
         message.react('746041025147174973');
     }
     
-     if(msg.includes('AIRFALL WAS HERE') || msg.includes('AIRFALL, WAS HERE') || msg.includes('AIRFALL ')) {
+     if(msg.includes('AIRFALL WAS HERE') || msg.includes('AIRFALL, WAS HERE')) {
+
+        if (talkedRecently2.has(message.author.id)) {
+            message.delete();
+        }
+    
+        else if (talkedRecently.has(message.author.id)) {
+            
+            message.channel.send("No, airfall was not her et arrête de spam");
+           
+            talkedRecently2.add(message.author.id);
+            setTimeout(() => {
+              // Removes the user from the set after a minute
+              talkedRecently2.delete(message.author.id);
+            }, 60000);
+    
+    } else {
+
         message.channel.send('No, airfall was not here!');
+
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 60000);
+    }
     }
 
     if(msg.includes('BEYWHEELZ')) {
