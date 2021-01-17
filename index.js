@@ -6,6 +6,9 @@ const monkeyDebut = require("./oui/monkeyDebut");
 const monkeyFin = require("./oui/monkeyFin");
 
 
+const talkedRecently = new Set();
+const talkedRecently2 = new Set();
+
 var bot = new Discord.Client();
 
 bot.on('ready', () => {        
