@@ -5,9 +5,9 @@ const fs = require('fs');
 const Canvas = require("canvas")
 const snekfetch = require("snekfetch")
 
-    bot.on("guildMemberAdd", async member => {
+    bot.on("guildMemberAdd", async (bot, member) => {
 
-        if (message.guild.id == 730433603808264192){
+        if (bot.guilds.get == 730433603808264192){
 
            
         
