@@ -97,8 +97,12 @@ var msg = message.content.toUpperCase();
         message.react('746041025147174973');
     }
     
-     if(msg.includes('HERE') && (message.author.id == '326694663387873282') ) {
+     if(msg.includes('HERE') || (msg.includes('WAS') || (msg.includes('AIRFALL') ) {
 
+          if (message.author.id == '326694663387873282') || (message.author.id == '188304318338695168') ) {
+            
+              
+        
         if (talkedRecently2.has(message.author.id)) {
             message.delete();
         }
@@ -124,7 +128,7 @@ var msg = message.content.toUpperCase();
         }, 60000);
     }
     }
-
+}
     if(msg.includes('BEYWHEELZ')) {
         message.delete();
         message.reply("BeyMERDE INTERDIT fdp").then(sentMessage => {
