@@ -105,7 +105,7 @@ var msg = message.content.toUpperCase();
     
         else if (talkedRecently.has(message.author.id)) {
             
-            message.channel.send("No, airfall was not her et arrête de spam");
+            message.channel.send("No, airfall was not here et arrête de spam");
            
             talkedRecently2.add(message.author.id);
             setTimeout(() => {
