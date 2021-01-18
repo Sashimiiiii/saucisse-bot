@@ -97,12 +97,12 @@ var msg = message.content.toUpperCase();
         message.react('746041025147174973');
     }
     
-     if(msg.includes('HERE') || (msg.includes('WAS') || (msg.includes('AIRFALL') ) {
+      if(msg.includes('AIRFALL') || msg.includes('HERE') || msg.includes('WAS')) {
 
-          if (message.author.id == '326694663387873282') || (message.author.id == '188304318338695168') ) {
-            
-              
+        if (message.author.id == '326694663387873282' || message.author.id == '188304318338695168') {
+
         
+
         if (talkedRecently2.has(message.author.id)) {
             message.delete();
         }
