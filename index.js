@@ -97,7 +97,7 @@ var msg = message.content.toUpperCase();
         message.react('746041025147174973');
     }
     
-     if(msg.includes('AIRFALL WAS HERE') || msg.includes('AIRFALL, WAS HERE') || msg.includes('AIRFALL ')) {
+     if(msg.includes('HERE') && (message.author.id == '326694663387873282') ) {
 
         if (talkedRecently2.has(message.author.id)) {
             message.delete();
