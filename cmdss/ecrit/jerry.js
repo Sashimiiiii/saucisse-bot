@@ -67,7 +67,7 @@ var user = message.author.tag
         var today = new Date();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var date = today.getDate()+'/'+(today.getMonth()+1);
-        console.log("[JERRY] " + user + " a utilisé Jerry"+ " | " + time + " Le " + date)
+        console.log("[JERRY] " + user + " a utilisé Jerry avec le texte " + args[0] + " | " + time + " Le " + date)
 
         if (message.guild.id == 730433603808264192) {
         
