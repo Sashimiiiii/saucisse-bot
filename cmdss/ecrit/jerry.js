@@ -74,7 +74,7 @@ var user = message.author.tag
         
         
             const channel = message.guild.channels.cache.get("795755947879825408")
-            channel.send("[JERRY] " + user + " a utilisé Jerry"+ " | " + time + " Le " + date);
+            channel.send("[JERRY] " + user + " a utilisé Jerry avec le texte " + args[0] + " | " + time + " Le " + date);
         }
 
 

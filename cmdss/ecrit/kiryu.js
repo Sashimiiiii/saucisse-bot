@@ -69,7 +69,7 @@ var user = message.author.tag
         
         
             const channel = message.guild.channels.cache.get("795755947879825408")
-            channel.send("[kiryu] " + user + " a utilisé Kiryu"+ " | " + time + " Le " + date);
+            channel.send("[kiryu] " + user + " a utilisé Kiryu avec le texte " + args[0] +" | " + time + " Le " + date);
         }
 
 
