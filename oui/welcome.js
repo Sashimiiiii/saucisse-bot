@@ -12,8 +12,7 @@ const snekfetch = require("snekfetch")
            
         
 
-    const channel = member.guild.channels.cache.find(ch => ch.id === '744284383187304551').catch();
-        
+    const channel = member.guild.channels.cache.find(ch => ch.id === '744284383187304551')
     //channel.send('Salut <@'+ member.id +'>')
 
     
