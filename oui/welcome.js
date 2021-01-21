@@ -5,25 +5,25 @@ const fs = require('fs');
 const Canvas = require("canvas")
 const snekfetch = require("snekfetch")
 
-    bot.on("guildMemberAdd", async (bot, member) => {
+    bot.on("guildMemberAdd", async member => {
 
 
 
            
         
 
-    const channel = member.guild.channels.cache.find(ch => ch.id === '744284383187304551')
-    //channel.send('Salut <@'+ member.id +'>')
+    const channel = member.guild.channels.cache.find(ch => ch.id === '744284383187304551');
+    //744284383187304551
 
     
 //setTimeout(() => {
     console.log(member.displayName +' a rejoin le serveur')
-// if(!member.roles.cache.find(r => r.name === "SINGE"))
-// {
-    var role = member.guild.roles.cache.find(r => r.id === "730523725879050321");
+if(!member.roles.cache.find(r => r.name === "SINGE"))
+{
+    var role = member.guild.roles.cache.find(r => r.name === "Saucissons");
     member.roles.add(role).catch(console.error);
 
-// }
+}
     
 //}, 3000);
     
