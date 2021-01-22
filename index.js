@@ -99,7 +99,7 @@ var msg = message.content.toUpperCase();
     
       if(msg.includes('AIRFALL') || msg.includes('HERE') || msg.includes('WAS')) {
 
-        if (message.author.id == '326694663387873282' || message.author.id == '188304318338695168') {
+        if (message.author.id == '326694663387873282') {
 
         
 
