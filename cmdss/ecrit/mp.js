@@ -38,7 +38,7 @@ if (message.guild.id == 730433603808264192) {
        
             channel.send("[MP] " + user + " a mp" + text +" à" + destinataire + " | " + time + " Le " + date);
         }
-
+        var user = message.author.tag
         const logs = message.guild.channels.cache.get("803747020522782720");
         logs.send("[MP] " + user + " a mp" + text +" à" + destinataire + " | " + time + " Le " + date);
     

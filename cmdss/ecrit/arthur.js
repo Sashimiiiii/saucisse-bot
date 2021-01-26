@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
             
             channel.send("[ARTHUR] " + user + " a utiliser Arthur | " + time + " Le " + date);
         }
-
+        var user = message.author.tag
         const logs = message.guild.channels.cache.get("803747020522782720");
         logs.send("[ARTHUR] " + user + " a utiliser Arthur | " + time + " Le " + date);
         
