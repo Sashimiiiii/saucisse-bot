@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
 
         message.channel.send("Voila la bataille contre le dragon playmobile :https://www.youtube.com/watch?v=ffchuRROZ_A")
         
+        
         if (message.guild.id == 730433603808264192) {
         
         
@@ -25,7 +26,10 @@ module.exports.run = async (bot, message, args) => {
             
             channel.send("[ARTHUR] " + user + " a utiliser Arthur | " + time + " Le " + date);
         }
-    
+
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[ARTHUR] " + user + " a utiliser Arthur | " + time + " Le " + date);
+        
 }
 
 module.exports.help = {

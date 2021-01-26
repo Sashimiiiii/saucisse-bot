@@ -31,6 +31,9 @@ module.exports.run = async (bot, message,) => {
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var date = today.getDate()+'/'+(today.getMonth()+1);
         console.log("[H] " + user + " à écrit: " + args[0] + " | " + time + " Le " + date)
+
+        const logs = message.guild.channels.cache.get("803747020522782720")
+        logs.send("[H] " + user + " à écrit: " + args[0] + " | " + time + " Le " + date);
         
         if (message.guild.id == 730433603808264192) {
         

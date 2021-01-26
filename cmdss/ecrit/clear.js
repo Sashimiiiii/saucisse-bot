@@ -38,6 +38,9 @@ if(message.member.roles.cache.some(r => r.name === "Ultra Saucisses") || (messag
         
         channel.send("[CLEAR] " + user + " à clear: " + args + " messages | " + time + " Le " + date);
     }
+
+    const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[CLEAR] " + user + " à clear: " + args + " messages | " + time + " Le " + date);
    
 }
 

@@ -57,7 +57,8 @@ var user = message.author.tag
             
             channel.send("[DELIRE] " + user + " a utilisé DELIRE sur " + member + " | " + time + " Le " + date);
         }
-
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[DELIRE] " + user + " a utilisé DELIRE sur " + member + " | " + time + " Le " + date);
 
 }
 

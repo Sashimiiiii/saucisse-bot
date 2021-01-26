@@ -26,6 +26,8 @@ module.exports.run = async (bot, message, args) => {
             channel.send("[DETER] " + user + " a utiliser Deter | " + time + " Le " + date);
         }
     
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[DETER] " + user + " a utiliser Deter | " + time + " Le " + date);
 }
 
 module.exports.help = {

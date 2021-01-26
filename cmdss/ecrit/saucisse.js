@@ -27,6 +27,9 @@ module.exports.run = async (bot, message, args) => {
        
             channel.send("[SAUCISSE] " + user + " a utiliser Saucisse | " + time + " Le " + date);
         }
+
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[SAUCISSE] " + user + " a utiliser Saucisse | " + time + " Le " + date);
 }
 
 module.exports.help = {

@@ -30,6 +30,8 @@ module.exports.run = async (bot, message, args) => {
             channel.send("[BIBLIA] " + user + " a utiliser Biblia | " + time + " Le " + date);
         }
     
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[BIBLIA] " + user + " a utiliser Biblia | " + time + " Le " + date);
 }
 
 module.exports.help = {

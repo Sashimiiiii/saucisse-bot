@@ -55,6 +55,9 @@ var user = message.author.tag
             channel.send("[SILENCE] " + user + " a utilisé Silence sur " + member + " | " + time + " Le " + date);
         }
 
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[SILENCE] " + user + " a utilisé Silence sur " + member + " | " + time + " Le " + date);
+
 }
 
 module.exports.help = {
