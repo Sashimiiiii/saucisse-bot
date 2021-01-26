@@ -43,6 +43,9 @@ module.exports.run = async (bot, message, args) => {
    
         channel.send("[OEUF] " + user + " a utiliser OEUF | " + time + " Le " + date);
     }
+
+    const logs = message.guild.channels.cache.get("803747020522782720");
+    logs.send("[OEUF] " + user + " a utiliser OEUF | " + time + " Le " + date);
     
 
         }

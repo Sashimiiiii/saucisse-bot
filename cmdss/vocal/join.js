@@ -38,6 +38,9 @@ module.exports.run = async (bot, message, member) => {
            
                 channel.send("[JOIN] " + user + " a utiliser Join | " + time + " Le " + date);
             }
+
+            const logs = message.guild.channels.cache.get("803747020522782720");
+            logs.send("[JOIN] " + user + " a utiliser Join | " + time + " Le " + date);
     }
 module.exports.help = {
     name: "join"

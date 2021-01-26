@@ -37,7 +37,8 @@ module.exports.run = async (bot, message, args) => {
        
             channel.send("[SORCIER] " + user + " a utiliser Sorcier | " + time + " Le " + date);
         }
-
+        const logs = message.guild.channels.cache.get("803747020522782720");
+        logs.send("[SORCIER] " + user + " a utiliser Sorcier | " + time + " Le " + date);
         }
 module.exports.help = {
     name: "sorcier"

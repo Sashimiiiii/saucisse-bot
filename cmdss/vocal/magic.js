@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./sons/magic.mp3', {
-            volume: 0.2,
+            volume: 0.5,
         });
 
         //dispatcher.setVolume(0.1);
@@ -44,6 +44,8 @@ module.exports.run = async (bot, message, args) => {
    
         channel.send("[MAGIC] " + user + " a utiliser Magic | " + time + " Le " + date);
     }
+    const logs = message.guild.channels.cache.get("803747020522782720");
+    logs.send("[MAGIC] " + user + " a utiliser Magic | " + time + " Le " + date);
 
         }
 module.exports.help = {
