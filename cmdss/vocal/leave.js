@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
            
                 channel.send("[LEAVE] " + user + " a utiliser Leave | " + time + " Le " + date);
             }
-
+            var user = message.author.tag
             const logs = message.guild.channels.cache.get("803747020522782720");
             logs.send("[LEAVE] " + user + " a utiliser Leave | " + time + " Le " + date);
     

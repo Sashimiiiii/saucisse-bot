@@ -74,7 +74,7 @@ var user = message.author.tag
    
         channel.send("[CANADA] " + user + " a tts: " + nom + " | " + time + " Le " + date);
     }
-
+    var user = message.author.tag
     const logs = message.guild.channels.cache.get("803747020522782720");
         logs.send("[CANADA] " + user + " a tts: " + nom + " | " + time + " Le " + date);
 }
