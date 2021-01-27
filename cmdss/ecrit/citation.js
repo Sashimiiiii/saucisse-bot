@@ -18,9 +18,9 @@ module.exports.run = async (bot, message, args) => {
     
         do {
             // Assign the font to the context and decrement it so it can be measured again
-            ctx.font = `${fontSize -= 10}px sans-serif`;
+            ctx.font = `${fontSize -= 5}px sans-serif`;
             // Compare pixel width of the text to the canvas minus the approximate avatar size
-        } while (ctx.measureText(text).width > canvas.width - 50);
+        } while (ctx.measureText(text).width > canvas.width - 30);
     
         // Return the result to use in the actual canvas
         return ctx.font;
@@ -47,7 +47,7 @@ const ctx = canvas.getContext("2d");
 
             ctx.font = applyText(canvas, args[0]); 
             ctx.fillStyle = "white";
-            ctx.fillText(args[0] , 30, 80);
+            ctx.fillText(args[0] , 30, 70);
 
             const attachment = new Discord.MessageAttachment(
                 canvas.toBuffer(),
@@ -75,7 +75,7 @@ ctx.drawImage(avatar, 30, 120, 72, 72);
 
 ctx.font = applyText(canvas, text); 
 ctx.fillStyle = "white";
-ctx.fillText(text , 30, 80);
+ctx.fillText(text , 30, 70);
 
 ctx.font = "22px Arial";
 ctx.fillText(member.displayName , 112, 150);
