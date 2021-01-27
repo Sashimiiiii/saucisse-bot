@@ -95,16 +95,16 @@ var user = message.author.tag
         var today = new Date();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var date = today.getDate()+'/'+(today.getMonth()+1);
-        console.log("[kiryu] " + user + " a utilisé Kiryu avec le texte " + args[0] +" | " + time + " Le " + date)
+        console.log("[CITATION] " + user + " a utilisé citation | " + time + " Le " + date);
 
         if (message.guild.id == 730433603808264192) {
         
         
         
             const channel = message.guild.channels.cache.get("795755947879825408")
-            channel.send("[kiryu] " + user + " a utilisé Kiryu avec le texte " + args[0] +" | " + time + " Le " + date);
+            channel.send("[CITATION] " + user + " a utilisé citation | " + time + " Le " + date);
         }
-        bot.guilds.cache.get("554674515028738050").channels.cache.get("803747020522782720").send("[kiryu] " + user + " a utilisé Kiryu avec le texte " + args[0] +" | " + time + " Le " + date);
+        bot.guilds.cache.get("554674515028738050").channels.cache.get("803747020522782720").send("[CITATION] " + user + " a utilisé citation | " + time + " Le " + date);
 
 }
  
