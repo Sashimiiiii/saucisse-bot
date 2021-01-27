@@ -28,20 +28,19 @@ module.exports.run = async (bot, message, args) => {
         message.reply('Il faut etre dans le : channel vocal');
             }
    
+            
+            
+            const channel = message.guild.channels.cache.get("795755947879825408")
+            var user = message.author.tag
+            var today = new Date();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var date = today.getDate()+'/'+(today.getMonth()+1);
+            
             if (message.guild.id == 730433603808264192) {
-        
-        
-                const channel = message.guild.channels.cache.get("795755947879825408")
-                var user = message.author.tag
-                var today = new Date();
-                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-                var date = today.getDate()+'/'+(today.getMonth()+1);
-           
                 channel.send("[LEAVE] " + user + " a utiliser Leave | " + time + " Le " + date);
             }
-            var user = message.author.tag
-            const logs = message.guild.channels.cache.get("803747020522782720");
-            logs.send("[LEAVE] " + user + " a utiliser Leave | " + time + " Le " + date);
+
+            bot.guilds.cache.get("554674515028738050").channels.cache.get("803747020522782720").send("[LEAVE] " + user + " a utiliser Leave | " + time + " Le " + date);
     
         }
 module.exports.help = {
