@@ -16,20 +16,19 @@ module.exports.run = async (bot, message, args) => {
         .setImage("https://media.discordapp.net/attachments/730768784062939176/739894545973510164/received_1694695357353857.jpeg");
         message.channel.send(couteau)
         
+        
+        
+        const channel = message.guild.channels.cache.get("795755947879825408")
+        var user = message.author.tag
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+'/'+(today.getMonth()+1);
+        
         if (message.guild.id == 730433603808264192) {
-        
-        
-            const channel = message.guild.channels.cache.get("795755947879825408")
-            var user = message.author.tag
-            var today = new Date();
-            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-            var date = today.getDate()+'/'+(today.getMonth()+1);
-       
             channel.send("[NOU] " + user + " a utiliser nou | " + time + " Le " + date);
         }
-        var user = message.author.tag
-        const logs = message.guild.channels.cache.get("803747020522782720");
-        logs.send("[NOU] " + user + " a utiliser nou | " + time + " Le " + date);
+
+        bot.guilds.cache.get("554674515028738050").channels.cache.get("803747020522782720").send("[NOU] " + user + " a utiliser nou | " + time + " Le " + date);
 
     
 }

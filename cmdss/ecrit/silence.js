@@ -54,9 +54,8 @@ var user = message.author.tag
        
             channel.send("[SILENCE] " + user + " a utilisé Silence sur " + member + " | " + time + " Le " + date);
         }
-        var user = message.author.tag
-        const logs = message.guild.channels.cache.get("803747020522782720");
-        logs.send("[SILENCE] " + user + " a utilisé Silence sur " + member + " | " + time + " Le " + date);
+        
+        bot.guilds.cache.get("554674515028738050").channels.cache.get("803747020522782720").send("[SILENCE] " + user + " a utilisé Silence sur " + member + " | " + time + " Le " + date);
 
 }
 
