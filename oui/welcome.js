@@ -7,7 +7,7 @@ const snekfetch = require("snekfetch")
 
     bot.on("guildMemberAdd", async member => {
 
-
+     //   member.send("blah blah");
 
            
         
@@ -55,8 +55,18 @@ if(!member.roles.cache.find(r => r.name === "SINGE"))
          'Welcome.jpg'
          );
     
-    channel.send(attachment);
+
+         
+    channel.send(attachment)
+    setTimeout(() => {
+       
+        (channel.send("<@" + member.id +"> bienvenue chez les saucisses vrer, n'hésite pas à te présenter et/ou à mettre une photo de toi dans #trombinoscope qu'on se connaisse mieux et tout là"));
+        
+       
+    }, 1000);
     
+
+
     
     
     
