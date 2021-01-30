@@ -60,7 +60,7 @@ if(!member.roles.cache.find(r => r.name === "SINGE"))
     channel.send(attachment)
     setTimeout(() => {
        
-        (channel.send("<@" + member.id +"> bienvenue chez les saucisses vrer, n'hésite pas à te présenter et/ou à mettre une photo de toi dans #『📷』trombinoscope qu'on se connaisse mieux et tout là"));
+        (channel.send("<@" + member.id +"> bienvenue chez les saucisses vrer, n'hésite pas à te présenter et/ou à mettre une photo de toi dans <#800684306644729867> qu'on se connaisse mieux et tout là"));
         
        
     }, 1000);
