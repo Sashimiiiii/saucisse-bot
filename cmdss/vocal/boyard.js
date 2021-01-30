@@ -3,7 +3,7 @@ const fs = require('fs');
 var stream = require("ytdl-core");
 
 module.exports = {
-	name: 's!boyard',
+	name: 'boyard',
 	description: "fort avec nains et vieux",
 }
 
@@ -49,5 +49,5 @@ module.exports.run = async (bot, message, args) => {
 
         }
 module.exports.help = {
-    name: "s!boyard"
+    name: "boyard"
 }
