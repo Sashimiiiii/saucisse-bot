@@ -30,7 +30,7 @@ if (stringLength > 199) {
 const saveFile = async () => {
     const buffer = await tts.synthesize({
         text: nom,
-        voice: 'fr-FR'
+        voice: 'fr'
     });
 
     fs.writeFileSync('hello-world.mp3', buffer);
