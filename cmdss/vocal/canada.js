@@ -31,7 +31,7 @@ module.exports.run = async (bot, message,) => {
 const saveFile = async () => {
     const buffer = await tts.synthesize({
         text: nom,
-        voice: 'fr-CA'
+        voice: 'ca'
     });
 
     fs.writeFileSync('hello-world.mp3', buffer);
