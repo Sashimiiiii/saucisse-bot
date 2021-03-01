@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     }
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play('./sons/Monsieur Oeuf.mp3', {
+        const dispatcher = connection.play('./sons/Monsieur_Oeuf.mp3', {
             volume: 0.5,
         });
 
