@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
             
             var connection = await message.member.voice.channel.join();
-            const dispatcher = connection.play('./sons/o revoir.mp3');
+            const dispatcher = connection.play('./sons/o_revoir.mp3');
             dispatcher.on('finish', () => {
                 message.member.voice.channel.leave();
             });
