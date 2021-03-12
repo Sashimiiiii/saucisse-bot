@@ -12,7 +12,7 @@ const job = new CronJob('00 00 23 * * 4', function() {
   
  
 const channel = bot.channels.cache.get("730527992148656211");
-
+  
   channel.send("", { files: ["./images/vendredi.mp4"]});
 
   
