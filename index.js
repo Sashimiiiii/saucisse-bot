@@ -97,7 +97,7 @@ let prefix = prefixes[message.guild.id].prefixes;
 var msg = message.content.toUpperCase();
     
     if(msg.includes("LAPIN")) {
-        message.react('822130923717001248');
+        message.react('822130773661450241');
     }
     
     if(msg.includes("CHORUS")) {
