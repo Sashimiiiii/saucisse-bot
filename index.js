@@ -5,6 +5,7 @@ const adieu = require ('./oui/adieu');
 const monkeyDebut = require("./oui/monkeyDebut");
 const monkeyFin = require("./oui/monkeyFin");
 const vendredi = require("./oui/vendredi");
+const dimanche = require("./oui/dimanche");
 
 
 
@@ -26,6 +27,7 @@ bot.on('ready', () => {
     monkeyDebut(bot);
     monkeyFin(bot);
     vendredi(bot);
+    dimanche(bot);
 })
 
    
