@@ -99,6 +99,10 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
+    if(msg.includes("BITE")) {
+        message.react('🍆');
+    }
+    
     if(msg.includes("LAPIN")) {
         message.react('822130773661450241');
     }
