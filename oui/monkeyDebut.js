@@ -4,7 +4,7 @@ module.exports = (bot) => {
 const Discord = require('discord.js');
 const d = new Date();
 
-const job = new CronJob('00 00 23 * * 5', function() {
+const job = new CronJob('00 00 0 * * 6', function() {
   console.log('Monkey debut:', d);
   
   
