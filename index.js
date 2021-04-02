@@ -76,8 +76,26 @@ function loadCmds2() {
         })
     })
 };
+function loadCmds3() {
+    fs.readdir("./cmdss/image/", (err, files) => {
+        if(err) console.erroe(err);
+        var jsFiles = files.filter(f => f.split(".").pop() === "js");
+        if(jsFiles.length <= 0) {
+            console.log("Aucune commande à chargé.")
+            return;
+        }
+        console.log(`${jsFiles.length} commandes chargées.`);
+        jsFiles.forEach((f, i) => {
+            delete require.cache[require.resolve(`./cmdss/image/${f}`)];
+            var props = require(`./cmdss/image/${f}`);
+            console.log(`${i + 1}: ${f} chargé`);
+            bot.commands.set(props.help.name, props); 
+        })
+    })
+};
 loadCmds();
 loadCmds2();
+loadCmds3();
 
 bot.on('message', message => {
 
