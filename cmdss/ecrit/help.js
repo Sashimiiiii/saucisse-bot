@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
 			}
 	
 			message.channel.send("```ini\n" + str + "```\n");
-		}, 500); 
+		}, 100); 
 
 		setTimeout(() => {
 			message.channel.send("Commandes vocales:");
@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
 			}
 	
 			message.channel.send("```ini\n" + str + "```\n");
-		}, 1000); 
+		}, 200); 
 	
 
         
