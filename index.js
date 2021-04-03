@@ -117,6 +117,12 @@ let prefix = prefixes[message.guild.id].prefixes;
     
 var msg = message.content.toUpperCase();
     
+    if(message.member.roles.cache.some(r => r.name === "🙈 SINGE") && msg.includes("S!") )
+{
+    message.channel.send("TG SINGE");
+    return;
+}
+    
     if(msg.includes("BITE")) {
         message.react('🍆');
     }
