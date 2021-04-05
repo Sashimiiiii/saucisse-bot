@@ -6,7 +6,9 @@ const monkeyDebut = require("./oui/monkeyDebut");
 const monkeyFin = require("./oui/monkeyFin");
 const vendredi = require("./oui/vendredi");
 const dimanche = require("./oui/dimanche");
+const lundi = require("./oui/lundi");
 const mercredi = require("./oui/mercredi");
+const jeudi = require("./oui/jeudi");
 const quinzeheure = require("./oui/15h12");
 
 const talkedRecently = new Set();
@@ -28,7 +30,9 @@ bot.on('ready', () => {
     monkeyFin(bot);
     vendredi(bot);
     dimanche(bot);
+    lundi(bot);
     mercredi(bot);
+    jeudi(bot);
     quinzeheure(bot);
 })
 
