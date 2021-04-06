@@ -8,7 +8,7 @@ const vendredi = require("./oui/vendredi");
 const dimanche = require("./oui/dimanche");
 const lundi = require("./oui/lundi");
 const mercredi = require("./oui/mercredi");
-const jeudi = require("./oui/mardi");
+const mardi = require("./oui/mardi");
 const quinzeheure = require("./oui/15h12");
 
 const talkedRecently = new Set();
