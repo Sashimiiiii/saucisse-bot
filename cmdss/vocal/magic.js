@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
         const dispatcher = connection.play('./sons/magic.mp3', {
-            volume: 0.4,
+            volume: 0.2,
         });
 
         //dispatcher.setVolume(0.1);
