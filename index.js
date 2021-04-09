@@ -127,6 +127,13 @@ var msg = message.content.toUpperCase();
     message.channel.send("TG SINGE");
     return;
 }
+ 
+    if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGROS")||msg.includes("NEGRES")) {
+    message.delete();
+    message.channel.send("https://media.discordapp.net/attachments/696410685227270386/830191408437526568/171062215_6013053202053533_4265888126316665470_n.jpg");
+
+    
+}
     
     if(msg.includes("BITE")) {
         message.react('🍆');
