@@ -129,11 +129,12 @@ var msg = message.content.toUpperCase();
 }
  
     if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGRO")||msg.includes("NEGRE")) {
+        if (message.guild.id == 730433603808264192) {
     message.delete();
     message.reply("<:tnico_2_1:800706896294051880>");
     message.channel.send("https://media.discordapp.net/attachments/696410685227270386/830191408437526568/171062215_6013053202053533_4265888126316665470_n.jpg");
 
-    
+        }
 }
     
     if(msg.includes("BITE")) {
