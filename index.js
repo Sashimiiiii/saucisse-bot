@@ -128,7 +128,7 @@ var msg = message.content.toUpperCase();
     return;
 }
  
-    if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGRO")||msg.includes("NEGRE")) {
+    if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGRO")||msg.includes("NEGRE")||msg.includes("NÉGRO")||msg.includes("NÉGRE")) {
         if (message.guild.id == 730433603808264192) {
     message.delete();
     message.reply("<:tnico_2_1:800706896294051880>");
