@@ -4,7 +4,7 @@ var stream = require("ytdl-core");
 
 module.exports = {
 	name: 'amigo',
-	description: "musique de Kendji Girac (dédicace à Nic) ",
+	description: "musique de Kendji Girac (dédicace Anick) ",
 }
 
 
