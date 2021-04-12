@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     }
     if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        const dispatcher = connection.play('./sons/amigo.mp3', {
+        const dispatcher = connection.play('./sons/amigo.wav', {
             volume: 0.5,
         });
 
