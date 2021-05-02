@@ -104,7 +104,7 @@ loadCmds();
 loadCmds2();
 loadCmds3();
 
-bot.on('message', message => {
+bot.on('message', async message => {
 
     if (message.author.bot) return
     
@@ -137,7 +137,7 @@ var msg = message.content.toUpperCase();
         var today = new Date();
         var day = today.getDay();
 
-        const Test = message.channel.messages.fetch({ limit: 2 });
+        const Test = await message.channel.messages.fetch({ limit: 2 });
         lastMessage = Test.last();
         lastMessageContent = lastMessage.content;
         
