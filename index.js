@@ -137,7 +137,7 @@ var msg = message.content.toUpperCase();
         var today = new Date();
         var day = today.getDay();
 
-        const Test = await message.channel.messages.fetch({ limit: 2 });
+        const Test = message.channel.messages.fetch({ limit: 2 });
         lastMessage = Test.last();
         lastMessageContent = lastMessage.content;
         
