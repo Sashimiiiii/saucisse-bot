@@ -132,7 +132,7 @@ var msg = message.content.toUpperCase();
     
  if(msg.includes("A") || msg.includes("E") || msg.includes("I") || msg.includes("O") || msg.includes("U") || msg.includes("Y"))
 {
-    if (message.guild.id == 730433603808264192)
+   // if (message.guild.id == 730433603808264192)
     {
         var today = new Date();
         var day = today.getDay();
