@@ -16,6 +16,8 @@ const talkedRecently2 = new Set();
 
 var bot = new Discord.Client();
 
+var lastMessage;
+
 bot.on('ready', () => {        
     console.log("BOT IS READY");
     bot.user.setActivity("s!help", {type: "LISTENING"});
@@ -127,7 +129,24 @@ var msg = message.content.toUpperCase();
     message.channel.send("TG SINGE");
     return;
 }
- 
+    
+ if(msg.includes("A") || msg.includes("E") || msg.includes("I") || msg.includes("O") || msg.includes("U") || msg.includes("Y"))
+{
+    if (message.guild.id == 730433603808264192)
+    {
+        var today = new Date();
+        var day = today.getDay();
+
+        const Test = await message.channel.messages.fetch({ limit: 2 });
+        lastMessage = Test.last();
+        lastMessageContent = lastMessage.content;
+        
+        if(msg.includes("OUI") && lastMessageContent.includes("seul chez toi") && day == 6)
+        {
+            message.channel.send("https://media.discordapp.net/attachments/641923235075850241/838186511849226250/20210501_132746.png")
+        } 
+    }
+}
     if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGRO")||msg.includes("NEGRE")||msg.includes("NÉGRO")||msg.includes("NÉGRE")) {
         if (message.guild.id == 730433603808264192) {
     message.delete();
