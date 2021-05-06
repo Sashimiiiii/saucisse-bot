@@ -150,7 +150,7 @@ module.exports.run = async (bot, message, args, client) => {
 
         (message.channel.send({ files: ["./microonde.mp4"]}));
         
-    }, 1000); 
+    }, 2000); 
 
    
 
