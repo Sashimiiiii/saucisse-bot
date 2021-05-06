@@ -4,6 +4,7 @@ const Canvas = require("canvas")
 const snekfetch = require("snekfetch")
 const GIFEncoder = require('gifencoder');
 const { createCanvas } = require('canvas');
+var ffmpeg = require('fluent-ffmpeg');
 
 module.exports = {
 	name: 'microonde @nom',
@@ -140,8 +141,18 @@ module.exports.run = async (bot, message, args, client) => {
 
     encoder.finish();
     
+    ffmpeg()  
+    .input('./microonde.gif')
+    .input('./sons/microonde.mp3')
+    .save('./microonde.mp4')
 
-    message.channel.send({ files: ["./microonde.gif"]});
+    setTimeout(() => {
+
+        (message.channel.send({ files: ["./microonde.mp4"]}));
+        
+    }, 1000); 
+
+   
 
 
 
