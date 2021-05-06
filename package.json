@@ -7,17 +7,19 @@
     "assistant-notifier": "^2.1.11",
     "canvas": "^2.6.1",
     "cron": "^1.8.2",
-    "discord.js": "^12.5.1",
+    "discord-canvas": "^1.4.1",
     "discord-tts": "^1.0.3",
+    "discord.js": "^12.5.1",
     "ffmpeg-static": "^4.2.7",
+    "gifencoder": "^2.0.1",
     "google-translate-tts": "^0.1.0",
     "google-tts-api": "^0.0.5",
     "opusscript": "^0.0.7",
-    "snekfetch": "^4.0.4",
     "simple-youtube-api": "^5.2.1",
+    "snekfetch": "^4.0.4",
     "ytdl-core": "^4.2.1",
-    "ytpl": "^1.0.1",
-    "ytdl-core-discord": "^1.2.5"
+    "ytdl-core-discord": "^1.2.5",
+    "ytpl": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
