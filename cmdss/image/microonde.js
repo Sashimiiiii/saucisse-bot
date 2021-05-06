@@ -140,7 +140,9 @@ module.exports.run = async (bot, message, args, client) => {
 
 
     encoder.finish();
-    
+	
+	message.channel.send({ files: ["./microonde.gif"]});
+  /*  
     ffmpeg()  
     .input('./microonde.gif')
     .input('./sons/microonde.mp3')
@@ -150,9 +152,9 @@ module.exports.run = async (bot, message, args, client) => {
 
         (message.channel.send({ files: ["./microonde.mp4"]}));
         
-    }, 2000); 
+    }, 1000); 
 
-   
+  */ 
 
 
 
