@@ -10,7 +10,7 @@ const lundi = require("./oui/lundi");
 const mercredi = require("./oui/mercredi");
 const mardi = require("./oui/mardi");
 const quinzeheure = require("./oui/15h12");
-const mardi = require("./oui/mardi");
+
 const jojo = require("./oui/jojo");
 
 const talkedRecently = new Set();
