@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const d = new Date();
 
 console.log('Before job instantiation');
-const job = new CronJob('00 00 19 * * 6', function() {
+const job = new CronJob('00 00 18 * * 6', function() {
 
   console.log('jojo', d);
   
