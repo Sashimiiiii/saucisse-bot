@@ -144,7 +144,7 @@ var msg = message.content.toUpperCase();
         lastMessage = Test.last();
         lastMessageContent = lastMessage.content;
         
-        if(msg.includes("OUI") && lastMessageContent.includes("seul chez toi"))
+        if(msg.includes("OUI") && lastMessageContent.includes("SEUL CHEZ TOI"))
         {
             message.channel.send("https://media.discordapp.net/attachments/641923235075850241/838186511849226250/20210501_132746.png")
         } 
