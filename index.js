@@ -232,9 +232,9 @@ var msg = message.content.toUpperCase();
    
       
     
-    if(msg.includes('PIZZA')) {
-        message.channel.send("```\nDomino's Pizza\n```", { files: ["./images/dominos.mp4"]});
-    }
+   // if(msg.includes('PIZZA')) {
+   //     message.channel.send("```\nDomino's Pizza\n```", { files: ["./images/dominos.mp4"]});
+   // }
 
           
     
