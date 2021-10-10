@@ -20,14 +20,14 @@ module.exports.run = async (bot, message, client) => {
             // Assign the font to the context and decrement it so it can be measured again
             ctx.font = `${fontSize -= 10}px sans-serif`;
             // Compare pixel width of the text to the canvas minus the approximate avatar size
-        } while (ctx.measureText(text).width > canvas.width - 500);
+        } while (ctx.measureText(text).width > canvas.width - 350);
     
         // Return the result to use in the actual canvas
         return ctx.font;
     };
 
 
-const canvas = Canvas.createCanvas(483, 320);
+    const canvas = Canvas.createCanvas(960, 568);
 const ctx = canvas.getContext("2d");
 const background = await Canvas.loadImage("./images/peter.png")
 ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
@@ -47,7 +47,7 @@ ctx.font = applyText(canvas, args[0]);
 ctx.fillStyle = "black";
 ctx.lineWidth = 1;
 
-ctx.fillText(args[0] , 215, 100);
+ctx.fillText(args[0] , 400, 100);
 
 
 
