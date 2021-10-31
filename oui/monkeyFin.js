@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const d = new Date();
 const channel = bot.channels.cache.get("730527992148656211");
 
-const job = new CronJob('00 00 22 * * 6', function() {
+const job = new CronJob('00 00 23 * * 6', function() {
   console.log('Fin du monkey samedi:', d);
   
   
