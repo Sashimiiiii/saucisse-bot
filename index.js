@@ -184,12 +184,10 @@ var msg2 = message.content;
             
             if (msg2.endsWith('/')) 
             {
-                console.log("return")
                 return;
             }
-            if (msg2.includes("REEL")) 
+            if (msg2.includes("reel")) 
             {
-                console.log("return")
                 return;
             }
             
@@ -197,11 +195,8 @@ var msg2 = message.content;
             
             while (!result.endsWith('/'))
             {
-                console.log("while")
                 result = result.slice(0,-1);
-            }
-            
-            console.log(result);
+            }          
             message.channel.send(result);
         }
 
