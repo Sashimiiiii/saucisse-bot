@@ -180,7 +180,6 @@ var msg2 = message.content;
        // if (message.guild.id == 404662787336437760)
         {
 
-            console.log(msg);
             
             if (msg2.endsWith('/')) 
             {
