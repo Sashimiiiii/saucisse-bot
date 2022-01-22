@@ -188,6 +188,7 @@ var msg2 = message.content;
             }
             if (msg2.includes("reel")) 
             {
+                 message.channel.send("les vidéo ça marche po 😔");
                 return;
             }
             
