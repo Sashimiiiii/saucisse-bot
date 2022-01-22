@@ -126,6 +126,7 @@ let prefix = prefixes[message.guild.id].prefixes;
     
     
 var msg = message.content.toUpperCase();
+var msg2 = message.content;
     
     if(message.member.roles.cache.some(r => r.name === "🙈 SINGE") && msg.includes("S!") )
 {
@@ -174,6 +175,37 @@ var msg = message.content.toUpperCase();
         message.react('746041025147174973');
     }
     
+    if(msg2.includes("https://www.instagram.com")) {
+
+       // if (message.guild.id == 404662787336437760)
+        {
+
+            console.log(msg);
+            
+            if (msg2.endsWith('/')) 
+            {
+                console.log("return")
+                return;
+            }
+            if (msg2.includes("REEL")) 
+            {
+                console.log("return")
+                return;
+            }
+            
+            var result = msg2;
+            
+            while (!result.endsWith('/'))
+            {
+                console.log("while")
+                result = result.slice(0,-1);
+            }
+            
+            console.log(result);
+            message.channel.send(result);
+        }
+
+    }
       if(msg.includes('AIRFALL') || msg.includes('HERE') || msg.includes('WAS')) {
 
         if (message.author.id == '326694663387873282') {
