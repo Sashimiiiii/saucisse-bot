@@ -176,8 +176,11 @@ var msg2 = message.content;
     }
     
     if(msg2.includes("https://www.instagram.com")) {
-
-       // if (message.guild.id == 404662787336437760)
+        
+        if(message.embeds.length > 0)
+        {
+            return;
+        }
         {
 
             
