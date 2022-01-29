@@ -176,12 +176,14 @@ var msg2 = message.content;
     }
     
     if(msg2.includes("https://www.instagram.com")) {
-        
+        setTimeout(() => {
+
+		
         if(message.embeds.length > 0)
         {
             return;
         }
-        {
+        
 
             
             if (msg2.endsWith('/')) 
@@ -201,9 +203,11 @@ var msg2 = message.content;
                 result = result.slice(0,-1);
             }          
             message.channel.send(result);
-        }
+        
 
-    }
+    
+                   }, 500); 
+        }
       if(msg.includes('AIRFALL') || msg.includes('HERE') || msg.includes('WAS')) {
 
         if (message.author.id == '326694663387873282') {
