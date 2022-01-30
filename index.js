@@ -206,7 +206,7 @@ var msg2 = message.content;
         
 
     
-                   }, 500); 
+                   }, 1500); 
         }
       if(msg.includes('AIRFALL') || msg.includes('HERE') || msg.includes('WAS')) {
 
