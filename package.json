@@ -16,7 +16,7 @@
     "discord": "^0.8.2",
     "concat-map": "^0.0.1",
     "event-target-shim": "^5.0.1",
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.6.0",
     "ffmpeg-static": "^4.4.1",
     "glob": "^7.2.0",
     "fs.realpath": "^1.0.0",
