@@ -202,7 +202,7 @@ var msg2 = message.content;
             {
                 result = result.slice(0,-1);
             }          
-            message.channel.send(result);
+            message.channel.send(result + "media/");
         
 
     
