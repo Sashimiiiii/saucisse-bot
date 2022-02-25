@@ -181,6 +181,7 @@ var msg2 = message.content;
 		
         if(message.embeds.length > 0)
         {
+		console.log("déja embed")
             return;
         }
         
@@ -188,6 +189,7 @@ var msg2 = message.content;
             
             if (msg2.endsWith('/')) 
             {
+		    console.log("fini par /")
                 return;
             }
             if (msg2.includes("reel")) 
