@@ -174,8 +174,11 @@ var msg2 = message.content;
     if(msg.includes("CHORUS")) {
         message.react('746041025147174973');
     }
-    
+	
+    console.log(msg2)
+	
     if(msg2.includes("https://www.instagram.com")) {
+	    console.log(msg2)
         setTimeout(() => {
 
 		
