@@ -1,7 +1,3 @@
-const Discord = require('discord.js');
-const fs = require('fs');
-var stream = require("ytdl-core");
-
 module.exports = {
 	name: 'leave',
 	description: "Fait partir le bot du vocal mais c'est pas tres sympa pour lui",

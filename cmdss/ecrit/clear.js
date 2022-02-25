@@ -1,5 +1,3 @@
-var googleTTS = require('google-tts-api');
-
 module.exports = {
 	name: 'clear',
 	description: "|Admin| s!clear (nombre de message a supprimer)",

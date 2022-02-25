@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-var stream = require("ytdl-core");
 
 module.exports = {
 	name: 'amigo',

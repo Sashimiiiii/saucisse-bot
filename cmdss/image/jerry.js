@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const Canvas = require("canvas")
-const snekfetch = require("snekfetch")
 
 module.exports = {
 	name: 'jerry',
