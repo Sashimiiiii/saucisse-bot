@@ -2,6 +2,7 @@ module.exports = (bot) => {
   var CronJob = require('cron').CronJob;
 const Discord = require('discord.js');
 const d = new Date();
+const fs = require('fs');
 
 console.log('Before job instantiation');
 let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
