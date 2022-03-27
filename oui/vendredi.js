@@ -4,7 +4,14 @@ const Discord = require('discord.js');
 const d = new Date();
 
 console.log('Before job instantiation');
-const job = new CronJob('00 00 23 * * 4', function() {
+let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
+
+
+const baseHours = 23
+const BaseMinutes = 00
+
+const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * 4`, function() {
+
 
   console.log('Vendredi', d);
   

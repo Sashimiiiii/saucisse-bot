@@ -4,7 +4,14 @@ module.exports = (bot) => {
 const Discord = require('discord.js');
 const d = new Date();
 
-const job = new CronJob('00 00 23 * * 5', function() {
+let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
+
+
+const baseHours = 23
+const BaseMinutes = 00
+
+const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * 5`, function() {
+
   console.log('Monkey debut:', d);
   
   
