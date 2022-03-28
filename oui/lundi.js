@@ -11,7 +11,7 @@ let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
 const baseHours = 23
 const BaseMinutes = 00
 
-const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, function() {
+const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * 0`, function() {
 
 
 
