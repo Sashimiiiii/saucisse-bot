@@ -49,7 +49,7 @@ const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, fu
         
         const canvas = Canvas.createCanvas(1080, 1055);
         const ctx = canvas.getContext("2d");
-        const background = await Canvas.loadImage("./images/deja.png")
+        const background = Canvas.loadImage("./images/deja.png")
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
         
         ctx.font = applyText(canvas, date); 
