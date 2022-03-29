@@ -12,9 +12,9 @@ let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
 const baseHours = 14
 const BaseMinutes = 12
 
-const job = new CronJob(`00 * * * * *`, function() {
+const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * *`, function() {
 
-  const channel = bot.channels.cache.get("641923235075850241");
+  const channel = bot.channels.cache.get("730527992148656211");
 
   var today = new Date();
     var date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
