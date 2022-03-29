@@ -3,6 +3,7 @@ module.exports = (bot) => {
 const Discord = require('discord.js');
 const d = new Date();
 const fs = require('fs');
+const Canvas = require("canvas")
 
 console.log('Before job instantiation');
 let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
@@ -11,9 +12,9 @@ let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
 const baseHours = 14
 const BaseMinutes = 12
 
-const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, function() {
+const job = new CronJob(`00 * * * * *`, function() {
 
-  const channel = bot.channels.cache.get("730527992148656211");
+  const channel = bot.channels.cache.get("641923235075850241");
 
   var today = new Date();
     var date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
@@ -31,6 +32,12 @@ const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, fu
 
 
         case 2:
+
+          async function deja()
+          {
+
+          
+
             const applyText = (canvas, text) => {
                 const ctx = canvas.getContext('2d');
                 // Declare a base size of the font
@@ -49,7 +56,7 @@ const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, fu
         
         const canvas = Canvas.createCanvas(1080, 1055);
         const ctx = canvas.getContext("2d");
-        const background = Canvas.loadImage("./images/deja.png")
+        const background = await Canvas.loadImage("./images/deja.png")
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
         
         ctx.font = applyText(canvas, date); 
@@ -67,7 +74,9 @@ const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, fu
              );
         
              channel.send(attachment);
-           break;
+        }
+
+        deja();
    }
   
 
