@@ -18,14 +18,19 @@ const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, fu
   var today = new Date();
     var date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
 
-   var randomNumber = Math.floor(Math.random() * 2);
+   var randomNumber = Math.floor(Math.random() * 3);
    switch (randomNumber) {
        case 0:
         channel.send("<:Lydiens4:800410289442914365>");
            break;
 
+           case 1:
+        channel.send("<:Lydiens4:800410289442914365>");
+        channel.send("https://media.discordapp.net/attachments/696410685227270386/958367071048171540/souri.png");
+           break;
 
-        case 1:
+
+        case 2:
             const applyText = (canvas, text) => {
                 const ctx = canvas.getContext('2d');
                 // Declare a base size of the font
