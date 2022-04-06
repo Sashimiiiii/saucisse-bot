@@ -10,6 +10,7 @@ module.exports = {
 
 module.exports.run = async (bot, message, args, client) => {
 
+	message.delete();
     var member = message.guild.member(message.mentions.users.first());
 
 
