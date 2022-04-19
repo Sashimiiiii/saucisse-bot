@@ -151,6 +151,11 @@ var msg2 = message.content;
         } 
     }
 }
+	
+	if (message.guild.id == 730433603808264192) {
+    if(message.type === "PINS_ADD") message.channel.send("https://media.discordapp.net/attachments/756642366835785738/965976471900422144/unknown-13.png");
+	}
+	
     if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGRO")||msg.includes("NEGRE")||msg.includes("NÉGRO")||msg.includes("NÉGRE")) {
         if (message.guild.id == 730433603808264192) {
       
