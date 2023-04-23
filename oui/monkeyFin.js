@@ -9,10 +9,36 @@ const fs = require('fs');
 let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
 
 
-const baseHours = 23
+const baseHours = 00
 const BaseMinutes = 00
+const BaseDay = 0
 
-const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * 6`, function() {
+var newHours
+
+if (baseHours + hours.hours < 0) {
+  
+
+  
+  newHours = (baseHours + hours.hours) + 24;
+
+  var NewDay = BaseDay - 1;
+
+  if (NewDay < 0) {
+    NewDay = 06
+  }
+}
+
+else
+{
+  newHours = baseHours + hours.hours;
+  NewDay = BaseDay;
+}
+
+if (newHours < 10) {
+  newHours = `0${newHours}`
+}
+
+const job = new CronJob(`00 ${BaseMinutes} ${newHours} * * ${NewDay}`, function() {
 
   console.log('Fin du monkey samedi:', d);
   

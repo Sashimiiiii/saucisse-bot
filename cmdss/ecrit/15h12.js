@@ -19,10 +19,10 @@ module.exports.run = async (bot, message, member) => {
     var today = new Date();
     var tomorrow = new Date()   
     
-    if ((today.getHours() >= (14 + hours.hours) && today.getMinutes() >= 12) || today.getHours() > (14 + hours.hours) ) {
+    if ((today.getHours() >= (15 + hours.hours) && today.getMinutes() >= 12) || today.getHours() > (15 + hours.hours) ) {
         tomorrow.setDate(today.getDate() + 1)        
     }
-    tomorrow.setHours(14 + hours.hours)
+    tomorrow.setHours(15 + hours.hours)
     tomorrow.setMinutes(12)
     
     Next15h12 = Math.floor(tomorrow.getTime() / 1000)

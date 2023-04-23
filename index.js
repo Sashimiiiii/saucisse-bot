@@ -118,7 +118,7 @@ bot.on('message', async message => {
 
 if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
-        prefixes: "s!"
+        prefixes: "z!"
     };
 }
 
@@ -159,7 +159,7 @@ var msg2 = message.content;
     if (msg.includes("NIGGA") || msg.includes("NIGGER")|| msg.includes("NEGRO")||msg.includes("NEGRE")||msg.includes("NÉGRO")||msg.includes("NÉGRE")) {
         if (message.guild.id == 730433603808264192) {
       
-            if (msg.includes("MONTÉNÉGRO")) return;
+            if (msg.includes("MONTENEGRO")) return;
             
     message.delete();
     message.reply("<:tnico_2_1:800706896294051880>");
@@ -255,6 +255,10 @@ var msg2 = message.content;
         sentMessage.react('🤬');});
     }
 
+    if(msg.includes('MORBIUS')) {
+        message.channel.send("https://tenor.com/view/morbius-gif-25461795");
+    }
+
     if(msg.includes('BIBLA')) {
         var couteau = new Discord.MessageEmbed()
         .setAuthor(`Ce mec est un linguiste occitan`)
@@ -303,4 +307,11 @@ if(cmd) cmd.run(bot, message, args);
 
 
 
-bot.login(process.env.TOKEN)
+bot.login("NzIyNTAxMTE0NDkwMjU3NDQ5.G91FtN.-v-Jlt1QahbOtQtCi7VJujojmLQKkTMERVHLPQ")
+
+//NzIyNTAxMTE0NDkwMjU3NDQ5.G91FtN.-v-Jlt1QahbOtQtCi7VJujojmLQKkTMERVHLPQ
+//Saucisse
+
+//NzkxMzM2MzQxODE2MDgyNDUz.GjVsD2.CFG4u5FH9xSLzUmo0SmqwWfllY1ndkNFZ1Tj-0
+//zob
+

@@ -8,18 +8,30 @@ const Canvas = require("canvas")
 console.log('Before job instantiation');
 let hours = JSON.parse(fs.readFileSync("./hours.json", "utf8"));
 
+const variationNumber = 6
 
-const baseHours = 14
+const baseHours = 15
 const BaseMinutes = 12
 
-const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, function() {
+var newHours
+
+if (baseHours + hours.hours < 0) {
+  
+  newHours = (00 - hours.hours);
+}
+else
+{
+  newHours = baseHours+ hours.hours ;
+}
+
+const job = new CronJob(`00 ${BaseMinutes} ${newHours} * * *`, function() {
 
   const channel = bot.channels.cache.get("730527992148656211");
 
   var today = new Date();
     var date = today.getFullYear()+'.'+(today.getMonth()+1)+'.'+today.getDate();
 
-   var randomNumber = Math.floor(Math.random() * 3);
+   var randomNumber = Math.floor(Math.random() * variationNumber);
    switch (randomNumber) {
        case 0:
         channel.send("<:Lydiens4:800410289442914365>");
@@ -77,6 +89,19 @@ const job = new CronJob(`00 ${BaseMinutes} ${baseHours + hours.hours} * * *`, fu
         }
 
         deja();
+        break;
+
+        case 3:
+          channel.send({ files: ["./images/15h12.mp4"]});
+        break;
+
+        case 4:
+          channel.send({ files: ["./images/15h12(rock version).mp4"]});
+        break;
+
+        case 5:
+          channel.send({ files: ["./images/15h12Batiment.mp4"]});
+        break;
    }
   
 
