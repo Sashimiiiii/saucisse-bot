@@ -307,11 +307,4 @@ if(cmd) cmd.run(bot, message, args);
 
 
 
-bot.login("NzIyNTAxMTE0NDkwMjU3NDQ5.G91FtN.-v-Jlt1QahbOtQtCi7VJujojmLQKkTMERVHLPQ")
-
-//NzIyNTAxMTE0NDkwMjU3NDQ5.G91FtN.-v-Jlt1QahbOtQtCi7VJujojmLQKkTMERVHLPQ
-//Saucisse
-
-//NzkxMzM2MzQxODE2MDgyNDUz.GjVsD2.CFG4u5FH9xSLzUmo0SmqwWfllY1ndkNFZ1Tj-0
-//zob
-
+bot.login(process.env.TOKEN_BOT)
